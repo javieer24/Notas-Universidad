@@ -1,0 +1,37 @@
+class ArbolExp {
+public:
+
+    String* expInfijo() {
+        return expInfijo(raiz);
+    }
+
+private:
+    NodoExp *raiz;
+
+    String* expInfijo(NodoExp* nodo) {
+        if (nodo == nullptr) {
+            return "";
+        }
+        String* izq = expInfijo(nodo->izq);
+        String* der = expInfijo(nodo->der);
+        String* operador = nodo->valor;
+        if (*operador == "+" || *operador == "-") {
+            return new String(*izq + " " + *operador + " " + *der);
+        } else if (*operador == "*" || *operador == "/") {
+            String* izqConParentesis = (*nodo->izq->valor == "+" || *nodo->izq->valor == "-") ? new String("(" + *izq + ")") : izq;
+            String* derConParentesis = (*nodo->der->valor == "+" || *nodo->der->valor == "-") ? new String("(" + *der + ")") : der;
+            return new String(*izqConParentesis + " " + *operador + " " + *derConParentesis);
+        } else {
+            return operador;
+        }
+    }
+
+};
+
+class NodoExp {
+
+    String *valor;
+    NodoExp *izq;
+    NodoExp *der;
+
+};
