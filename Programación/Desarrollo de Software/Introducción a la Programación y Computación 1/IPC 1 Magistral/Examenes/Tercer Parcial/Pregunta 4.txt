@@ -1,0 +1,68 @@
+abstract class z
+{public abstract void J1 (int t);
+public int J2 () {System.out.println("Metodo Estatico de Z");}
+}
+class Y extends Z
+{public void J1 (int t)
+{int salida = 132/8^2-33+t;
+System.out.println("Resultado: "+salida);
+}
+public int J2 ()
+{System.out.println("Metodo Estatico de Y");
+return 5;
+}
+}
+class X extends Z
+{public void J1 (int t)
+{int salida = 5+132/8^2+33-t;
+System.out.println("Resultado: "+salida);
+}
+protected int J2 (int c)
+{System.out.println("Metodo Estatico X");
+return c;}
+}
+class W extends Z
+{public void J1() {System.out.println("Metodo J1 de la clase W");}
+}
+class Principal
+{public static void main (String a[])
+{int c=5; int d=0;
+Z z1, z2;
+z1=new Z();
+Y y1, y2;
+y1=new Y();
+X x1, x2;
+x1= new X();
+z2= y1;
+z2.J1(3);
+z2.J2();
+z2.X1();
+z2.J1(3);
+z2.J2(5);
+y2=z1();
+y2.J2();
+y2.J1(3);
+z2.J2();
+}
+}
+Para el código anterior responda las siguientes preguntas
+
+a.)      ¿Cuántas clases abstractas hay?
+
+b.)      ¿Cuántos Métodos Tiene la clase Y?
+
+c.)      ¿Cuántos Métodos Tiene la clase Z?
+
+d.)      ¿Cuantos errores hay en el método main?
+a) Hay una clase abstracta: Z.
+
+b) La clase Y tiene dos métodos: J1 y J2.
+
+c) La clase Z tiene dos métodos: J1 y J2.
+
+d) Hay varios errores en el método main:
+
+z1=new Z();: No se puede crear una instancia de una clase abstracta. Debería crearse una instancia de una de sus subclases concretas.
+z2.X1();: No existe un método llamado X1 en la clase Z.
+y2=z1();: El método z1 no está definido en ninguna parte del código. Debería ser y2 = new Y();.
+y2.J2();: El método J2 de la clase Y no acepta ningún parámetro, por lo que debería ser llamado sin argumentos: y2.J2();.

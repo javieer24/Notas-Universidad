@@ -1,0 +1,157 @@
+La función de Ackermann es una función recursiva que toma dos números naturales como argumentos y devuelve un único número natural. Como norma general se define como sigue:
+A(m,n)= n+1, si m = 0;
+A(m-1,1),si m > 0 y n = 0; A(m-1,A(m,n-1)),   si m > 0 y n > 0         }
+
+Escriba la función de Ackermann en un algoritmo recursivo.
+
+Dado el siguiente algoritmo recursivo:
+
+void f(int num, int div)  {
+      if (num>1)    {
+             if ((num%div) == 0) {
+                 System.out.println(div); 
+                 f(num/div,div);
+             } 
+           else {
+                f(num,div+1); 
+           } 
+     }
+} 
+
+Implemente un algoritmo iterativo equivalente
+RESPUESTAS
+Otra forma 
+
+public static void fIterativo(int num) {
+    int div = 2;
+    while (num > 1) {
+        if (num % div == 0) {
+            System.out.println(div);
+            num = num / div;
+        } else {
+            div++;
+        }
+    }
+}
+
+Otra forma 
+
+void f(int num, int div) {
+    while(num > 1) {
+        if(num % div == 0) {
+            System.out.println(div);
+            num = num / div; // update num by dividing it by div
+        } else {
+            div = div + 1; // increment the divisor
+        }
+    }
+}
+
+
+En pseudocódigo:
+función f(num, div):
+    while num > 1 hacer
+       if (num % div) = 0 entonces
+            imprimir(div)
+            num = num / div
+        else
+            div = div + 1
+        fin if
+    fin while
+fin función
+
+En java:
+public static void fIterativo(int num, int div) {
+void f(int num, int div) {
+    while(num > 1) {
+        if(num % div == 0) {
+            System.out.println(div);
+            num = num / div; // actualizando el  número dividiéndolo por div
+        } else {
+            div = div + 1; // incrementando el divisor
+        }
+    }
+}
+
+Ejercico 4
+Implement, both recursively and iteratively, a function that receives a character string as a parameter and returns TRUE if said character string is symmetric (a palindrome).
+// Verificar si una cadena es un palíndromo de forma recursiva
+funcion esPalindromoRecursivo(cadena):
+    si longitud(cadena) <= 1:
+        devolver verdadero
+    si primer_caracter(cadena) == ultimo_caracter(cadena):
+        devolver esPalindromoRecursivo(subcadena_desde(2, longitud(cadena) - 1))
+    sino:
+        devolver falso
+
+// Verificar si una cadena es un palíndromo de forma iterativa
+funcion esPalindromoIterativo(cadena):
+    para i desde 0 hasta longitud(cadena) / 2:
+        si caracter_en(i, cadena) != caracter_en(longitud(cadena) - i - 1, cadena):
+            devolver falso
+    devolver verdadero
+
+En java public static boolean isPalindromeRecursive(String str) {
+        if (str.length() == 0 || str.length() == 1) {
+            return true;
+        } else if (str.charAt(0) == str.charAt(str.length() - 1)) {
+            return isPalindromeRecursive(str.substring(1, str.length() - 1));
+        } else {
+            return false;
+        }
+    }
+
+
+public class Palindromo {
+    public static boolean esPalindromoRecursivo(String cadena) {
+        if (cadena.length() <= 1) {
+            return true;
+        }
+        if (cadena.charAt(0) == cadena.charAt(cadena.length() - 1)) {
+            return esPalindromoRecursivo(cadena.substring(1, cadena.length() - 1));
+        } else {
+            return false;
+        }
+    }
+
+    public static boolean esPalindromoIterativo(String cadena) {
+        for (int i = 0; i < cadena.length() / 2; i++) {
+            if (cadena.charAt(i) != cadena.charAt(cadena.length() - i - 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+
+
+
+
+Corregir para ue corra:
+public class Palindromo {
+    public static boolean esPalindromoRecursivo(String cadena) {
+        if (cadena.length() <= 1) {
+            return true;
+        }
+        if (cadena.charAt(0) == cadena.charAt(cadena.length() - 1)) {
+            return esPalindromoRecursivo(cadena.substring(1, cadena.length() - 1));
+        } else {
+            return false;
+        }
+    }
+
+    public static boolean esPalindromoIterativo(String cadena) {
+        for (int i = 0; i < cadena.length() / 2; i++) {
+            if (cadena.charAt(i) != cadena.charAt(cadena.length() - i - 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
+
+
+
+
+

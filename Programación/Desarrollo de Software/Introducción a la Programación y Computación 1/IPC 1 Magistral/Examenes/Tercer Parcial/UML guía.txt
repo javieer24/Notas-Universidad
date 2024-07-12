@@ -1,0 +1,66 @@
+
+clase Pedido {
+  atributos:
+    - cliente: Cliente
+    - fecha: Fecha
+    - productos: Lista<Producto>
+    - estado: EstadoPedido
+    - formaDePago: FormaDePago
+
+  métodos:
+    + calcularCosteTotal(): Dinero
+    + informarExistencias(): void
+}
+
+clase Producto {
+  atributos:
+    - nombre: Cadena
+    - precio: Dinero
+    - cantidad: Entero
+    - impuestos: Dinero
+
+  métodos:
+    + obtenerNombre(): Cadena
+}
+
+clase FormaDePago {
+  atributos:
+    - tipo: TipoFormaDePago
+    - fechaCaducidad: Fecha
+    - numero: Cadena
+    - moneda: Moneda
+    - nombreCheque: Cadena
+    - entidadBancariaCheque: Cadena
+
+  métodos:
+    + obtenerTipo(): TipoFormaDePago
+}
+
+clase Cliente {
+  atributos:
+    - nombre: Cadena
+    - direccion: Cadena
+
+  métodos:
+    + obtenerNombre(): Cadena
+}
+
+clase EstadoPedido {
+  atributos:
+    - pendiente: Booleano
+    - pagado: Booleano
+    - procesando: Booleano
+    - enviado: Booleano
+    - entregado: Booleano
+
+  métodos:
+    + obtenerEstado(): EstadoPedido
+}
+```
+
+Espero que este ejemplo te ayude a entender cómo se puede representar un diagrama de clases en pseudocódigo. Si necesitas más información o tienes alguna otra pregunta, no dudes en preguntar.
+
+Origen: Conversación con Bing, 20/4/2023
+(1) Codificación de diagramas de clases - Portal Académico del CCH. https://portalacademico.cch.unam.mx/cibernetica1/algoritmos-y-codificacion/diagramas-clases.
+(2) Cómo crear un diagrama de clases [+Ejemplos] - Venngage Blog. https://es.venngage.com/blog/diagrama-de-clases/.
+(3) Diagrama de clases. Teoria y ejemplos. - DiagramasUML.com. https://diagramasuml.com/diagrama-de-clases/.
