@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kardex PEPS</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">  </head>
+<body>
+
+<div class="container mt-5">
+    <form id="KardexRecordForm" action="submit.php" method="post">
+        <h1>Kardex - 202100081</h1>
+        <div class="form-group">
+            <label for="producto">Articulo:</label>
+            <select class="form-control" id="producto" name="producto" style="width: 7%; display: inline-block;">
+                <option value="Silla">Silla</option>
+                <option value="Mesa">Mesa</option>
+                <option value="Sillon">Sillon</option>
+            </select>
+            <label for="referencia" style="margin-left: 10px;">Referencia:</label>
+            <input type="text" id="referencia" name="referencia" style="width: 30%; display: inline-block;">
+            <label for="localizacion" style="margin-left: 10px;">Localización:</label>
+            <input type="text" id="localizacion" name="localizacion" style="width: 30%; display: inline-block;">
+        </div>
+    </form>
+</div>
+<div class="container mt-5">
+    <form id="KardexRecordForm" action="submit.php" method="post">
+        <div class="form-group">
+            <label for="proveedores">Proveedores:</label>
+            <select class="form-control" id="producto" name="producto" style="width: 20%; display: inline-block;">
+                <option value="Kalea">Kalea</option>
+                <option value="Muebleria">Muebleria Santo Tomas</option>
+                <option value="Ofita">Ofita</option>
+            </select>
+            <label for="minimo" style="margin-left: 10px;">Mínimo:</label>
+            <input type="text" id="minimo" name="minimo" style="width: 8%; display: inline-block;">
+            <label for="maximo" style="margin-left: 10px;">Máximo:</label>
+            <input type="text" id="maximo" name="maximo" style="width: 8%; display: inline-block;">
+        </div>
+    </form>
+</div>
+
+<div class="container mt-5">
+    <button id="addRow" class="btn btn-primary">Agregar fila</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Descripción</th>
+                <th>V/r Unitario</th>
+                <th colspan="2">Entradas</th>
+                <th colspan="2">Salidas</th>
+                <th colspan="2">Saldo</th>
+            </tr>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>Cantidad</th>
+                <th>Valor</th>
+                <th>Cantidad</th>
+                <th>Valor</th>
+                <th>Cantidad</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody id="kardexTable">
+            <!-- Aquí se agregarán las filas de la tabla con jQuery -->
+        </tbody>
+    </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+$(document).ready(function () {
+    $('#addRow').click(function () {
+        var row = '<tr><td><input type="date" class="form-control"></td><td><input type="text" class="form-control"></td><td><input type="number" class="form-control"></td><td><input type="number" class="form-control"></td><td><input type="number" class="form-control"></td><td><input type="number" class="form-control"></td><td><input type="number" class="form-control"></td><td><input type="number" class="form-control"></td><td><input type="number" class="form-control"></td></tr>';
+        $('#kardexTable').append(row);
+    });
+});
+</script>
+    
+
+</body>
+</html>

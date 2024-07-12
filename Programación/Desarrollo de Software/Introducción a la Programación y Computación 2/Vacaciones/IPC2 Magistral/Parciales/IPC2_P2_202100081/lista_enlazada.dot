@@ -1,0 +1,34 @@
+// Lista Enlazada
+digraph {
+	0 [label="Nombre: Producto 1
+Precio: 10.99
+Cantidad: 5"]
+	0 -> 1
+	1 [label="Nombre: Producto 2
+Precio: 20.99
+Cantidad: 10"]
+	1 -> 2
+	2 [label="Nombre: Producto 3
+Precio: 15.99
+Cantidad: 7"]
+	2 -> 3
+	3 [label="Nombre: Producto 4
+Precio: 25.99
+Cantidad: 9"]
+	3 -> 4
+	4 [label="Nombre: Producto 5
+Precio: 30.99
+Cantidad: 11"]
+	4 -> 5
+	5 [label="Nombre: Producto 6
+Precio: 35.99
+Cantidad: 13"]
+	5 -> 6
+	6 [label="Nombre: Producto 7
+Precio: 40.99
+Cantidad: 15"]
+	6 -> 7
+	7 [label="Nombre: Producto 8
+Precio: 45.99
+Cantidad: 17"]
+}

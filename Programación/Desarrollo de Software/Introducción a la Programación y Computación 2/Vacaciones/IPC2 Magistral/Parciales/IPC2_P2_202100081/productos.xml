@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productos>
+    <producto>
+        <nombre>Producto 1</nombre>
+        <precio>10.99</precio>
+        <cantidad>5</cantidad>
+    </producto>
+    <producto>
+        <nombre>Producto 2</nombre>
+        <precio>20.99</precio>
+        <cantidad>10</cantidad>
+    </producto>
+    <producto>
+        <nombre>Producto 3</nombre>
+        <precio>15.99</precio>
+        <cantidad>7</cantidad>
+    </producto>
+    <producto>
+        <nombre>Producto 4</nombre>
+        <precio>25.99</precio>
+        <cantidad>9</cantidad>
+    </producto>
+    <producto>
+        <nombre>Producto 5</nombre>
+        <precio>30.99</precio>
+        <cantidad>11</cantidad>
+    </producto>
+    <producto>
+        <nombre>Producto 6</nombre>
+        <precio>35.99</precio>
+        <cantidad>13</cantidad>
+    </producto>
+    <producto>
+        <nombre>Producto 7</nombre>
+        <precio>40.99</precio>
+        <cantidad>15</cantidad>
+    </producto>
+    <producto>
+        <nombre>Producto 8</nombre>
+        <precio>45.99</precio>
+        <cantidad>17</cantidad>
+    </producto>
+</productos>
