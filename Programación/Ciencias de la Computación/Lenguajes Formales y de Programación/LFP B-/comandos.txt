@@ -1,0 +1,24 @@
+clear ctrl+l # para limpiar la pantalla
+
+git inicit # se usa para crear un repositorio
+
+git status # para ver el estado del repositorio
+
+git add (nombre del archivo) # para agregar un archivo al repositorio
+
+git log # para ver el historial de cambios del repositorio
+
+git commit -m "mensaje" # para guardar los cambios en el repositorio
+
+git checkout (iniciales del has) # para regresar a un punto anterior
+
+git checkout master # para regresar al ultimo punto
+
+git reset (iniciales del has) # para regresar a un punto anterior pero se bora del historial y se pierde el hash (es como si nunca se hubiera echo el cambio)
+
+git reset --hard (iniciales del has) # para regresar a un punto anterior pero se bora del historial y se pierde el hash (es como si nunca se hubiera echo el cambio) y se borra el archivo
+
+git rm (nombre del archivo) # para borrar un archivo del repositorio
+
+git restore (nombre del archivo) # para recuperar un archivo borrado
+
