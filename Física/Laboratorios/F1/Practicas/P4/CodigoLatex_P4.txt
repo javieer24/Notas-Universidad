@@ -1,0 +1,311 @@
+\documentclass[osajnl,twocolumn,showpacs,superscriptaddress,10pt]{revtex4-1}
+%
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%
+%Paquete de Idioma
+\usepackage[spanish]{babel}
+%
+%CodificaciÃ³n Alfabeto
+\usepackage[utf8]{inputenc}
+%
+%CodificaciÃ³n de Fuente
+\usepackage[T1]{fontenc}
+%
+%Ãndice
+\usepackage{makeidx}
+%
+%GrÃ¡ficos
+\usepackage{graphicx}
+\usepackage{subfig}
+%\usepackage{xcolor} 
+%
+%MatemÃ¡tica
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{amstext} 
+%
+%Estilo de PÃ¡gina NumeraciÃ³n superior
+%\pagestyle{headings}
+%
+%Hiperlinks \href{url}{text}
+\usepackage[pdftex]{hyperref}
+%
+%Graficos y tablas
+\usepackage{multirow}
+%\usepackage{multicol}
+\usepackage{float}
+\usepackage{booktabs}
+%
+\decimalpoint
+%\bibliographystyle{IEEEtran}
+%\bibliography{IEEEabrv,mybibfile}
+%
+%
+\begin{document}
+%Titulo
+\title{Práctica 4: Elasticidad}
+\thanks{Laboratorios de Física}
+
+\author{Agnnes Maria, Wellmann Salvador, 202100186}\email{e-mail:3705174660101@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, Zona 12, Guatemala.
+}%
+\author{Diego Andres Rivera Noriega, 202100164}\email{e-mail: 3734436760101@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, Zona 12, Guatemala.
+}%
+\author{Joab Israel, Ajsivinac Ajsivinac, 202200135}\email{e-mail: 3114791110409@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, 
+}%
+\author{Dominic Juan Pablo, Ruano Perez, 202200075}\email{e-mail: 3863542270101@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, 
+}%
+\author{Javier Andrés, Monjes Solórzano, 202100081}\email{e-mail: 3020696740101@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, Zona 12, Guatemala.
+}%
+%\collaboration{MUSO Collaboration}%\noaffiliation
+
+%\date{\today}%
+
+%Resumen
+\begin{abstract}
+
+La práctica No.4 consistió en determinar el módulo de Young de un hilo de pescar, el objetivo de la practica fue encontrar dicho modulo, del cual se necesitó la ayuda de un equipo para poder tomar las medidas experimentales y luego el cálculo. Se prenso el soporte universal a una mesa, luego se ató el hilo de pescar y se midió su longitud inicial para después medir las longitudes finales cuando el hilo estaba sometido a diferentes masas, logrando así las deformaciones y esfuerzos. Usando el programa Qtiplot se obtuvo el módulo de Young teórico el cual fue comparado con el resultado experimental. Esta práctica ayudo a nutrir los conocimientos acerca de la elasticidad cuando el hilo de pescar tenía un estiramiento observable.
+\end{abstract}
+
+\maketitle{}
+
+\section{Objetivos}
+
+\subsection{Generales}
+\begin{itemize}
+\item[$\bullet$]Determinar el Módulo de Young de un hilo de pescar.
+\end{itemize}
+\subsection{Específicos}
+\begin{itemize}
+\item[*]Determinar el esfuerzo al que está sometido el hilo. 
+\item[*]Calcular la deformación que sufre el hilo de pescar.
+\item[*] Determinar una gráfica del Esfuerzo vs Deformación del hilo de pesca.
+\item[*]Obtener al valor del módulo de Young analizando la naturaleza polinomial de la gráfica obtenida.
+\item[*]Comparar el valor del Módulo de Young obtenido experimentalmente con el valor teórico del hilo de pesca.
+\end{itemize}
+ 
+\section{Marco Teórico}
+\subsection*{Determinación del módulo de Young del hilo de pescar.}
+\begin{itemize}
+\item[]
+Si sobre cierta región de un cuerpo se ejerce una fuerza, se dice que el cuerpo está sometido a un esfuerzo ($\sigma$), todos los cuerpos existentes en la naturaleza experimentan deformaciones cuando se someten a esfuerzos. Si el esfuerzo aplicado no excede el límite elástico el cuerpo se deforma, pero al cesar el esfuerzo el cuerpo recobra su forma inicial. Caso contrario si el esfuerzo sobre pasa el límite elástico el cuerpo queda permanentemente deformado.
+importantes al calcular el momento de inercia de un cuerpo.
+\item[]Para cables o volúmenes, la elasticidad se describe generalmente, en términos de cantidad de deformación (tensión) resultante de un estiramiento determinado (módulo de Young).
+\item[] Una gráfica de esfuerzo vs deformación muestra claramente que existen dos zonas, la zona elástica y la zona plástica.
+\end{itemize}
+  \begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.1}\\
+\includegraphics[scale=0.5]{Figura 4.1_EI limite elastico delimita la zona plastica de la zona elastica..png}
+    \caption*{El límite elástico delimita la zona plástica de la zona elástica.}
+    \caption*{Fuente: Manual Laboratorio Física 1}
+\end{figure}
+\subsection{Elasticidad}
+\begin{itemize}
+\item[] Cuando en física hablamos de elasticidad, nos referimos a la propiedad de ciertos materiales de ser deformados bajo una fuerza externa que actúa sobre ellos y luego recuperar su forma original cuando dicha fuerza desaparece. A estos tipos de conductas se las conoce como deformaciones reversibles o memoria de forma.
+\item[]No todos los materiales son elásticos y aquellos que se rompen, se fragmentan o permanecen deformados luego de la acción de la fuerza externa simplemente no son elásticos en absoluto.
+\item[]Los principios de la elasticidad son estudiados por la mecánica de sólidos deformables, según la Teoría de la Elasticidad, que explica cómo un sólido se deforma o se mueve como respuesta a fuerzas exteriores que inciden sobre él.
+\item[]Así, cuando estos sólidos deformables reciben dicha fuerza exterior, se deforman y acumulan en su interior una cantidad de energía potencial elástica y, por lo tanto, también de energía interna.
+\item[]Dicha energía, una vez retirada la fuerza deformante, será la que obligue al sólido a recuperar su forma y se transforme en energía cinética, haciéndolo moverse o vibrar. La magnitud de la fuerza externa y los coeficientes de elasticidad del objeto deformado serán los que permitan calcular el tamaño de la deformación, la magnitud de la elástica y la tensión acumulada en el proceso. Un cuerpo se deforma cuando al aplicarle fuerzas éste cambia de forma o de tamaño. La Elasticidad es la propiedad de un material en virtud de la cual las deformaciones causadas por la aplicación de una fuerza desaparecen cuando cesa la acción de la fuerza.
+    \subsection{Plasticidad}
+\item[]La plasticidad es aquella propiedad que permite al material soportar una deformación permanente sin fracturarse.
+\item[]La ecuación que modela el comportamiento en la zona elástica es:
+    \item[] \begin{equation}
+        \sigma = Y \epsilon
+    \end{equation}
+\item[]donde $\sigma$ es el esfuerzo al que está sometido el cuerpo y viene dado por
+    \item[]\begin{equation}
+        \sigma = \frac{F}{A}
+    \end{equation}
+\item[]$\epsilon$ es la deformación que sufre el cuerpo el cual viene dado por:
+    \item[] \begin{equation}
+        \epsilon = \frac{\Delta L}{L_o}
+    \end{equation}
+\item[]y $Y$ es el módulo de elasticidad de Young, valor del módulo de Young es una medida de la rigidez del material, entre mayor sea la pendiente de la curva más rígido será el material.
+\end{itemize}
+\section{Diseño Experimental}
+Se determinó la longitud de un hilo que pende de una varilla en su extremo superior, cuando ninguna fuerza ejerce tensión sobre ella y cuando una masa pende de la cuerda por su parte inferior.
+\subsection{Materiales}
+\begin{itemize}
+\item[*] $110 cm$ de hilo de pescar de diámetro $d=0.30 mm$.  
+\item[*] Un Soporte Universal. 
+\item[*] Una cinta de papel.
+\item[*] Una balanza. 
+\item[*] Un juego de 6 masas con su soporte y una masa de $500 g$ con gancho.
+\end{itemize}
+\subsection{Magnitudes físicas a medir}
+\begin{itemize}
+\item[*] La longitud inicial sin esfuerzo.
+\item[*] La longitud final del hilo de pescar sometido a esfuerzo.
+\item[*] La masa $m$ que cuelga del hilo.
+\end{itemize}
+\subsection{Procedimiento}
+\begin{enumerate}
+\item[*] Se armó el equipo que lo indica la guía. 
+\item[*] Se prensó el soporte universal a la mesa, se sujetó el hilo de pescar firmemente al soporte universal. 
+\item[*] Se aseguro firmemente el otro extremo del hilo de pescar al soporte de las masas.
+\item[*]  Se midió la longitud inicial del hilo de pescar (de nudo a nudo, puede ayudarse de una cinta de papel).
+\item[*] Se introdujo una masa al soporte y se medió su longitud, luego se procedió a hacer el mismo procedimiento con el resto de las masas.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{Figura 4.2.png}
+    \caption*{Figura 1.2}
+    \caption*{Fuente: Manual Laboratorio Física 1}
+    \end{figure}  
+\end{enumerate}
+\section{Resultados}
+
+    \begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.3}\\
+    \text{Tabla de los datos obtenidos}\\
+    
+        \begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+    Masa (kg)        & L_o (m)       & L_f (m)       & Tensión (N)       \\ \hline
+    0.1793 \pm 0.0001 & 0.865 \pm 0.001 & 0.910 \pm 0.001 & 1.75714 \pm 0.0001 \\ \hline
+    0.3293 \pm 0.0001 & 0.865 \pm 0.001 & 0.930 \pm 0.001 & 3.22714 \pm 0.0001 \\ \hline
+    0.4803 \pm 0.0001 & 0.865 \pm 0.001 & 0.950 \pm 0.001 & 4.70694 \pm 0.0001 \\ \hline
+    0.6083 \pm 0.0001 & 0.865 \pm 0.001 & 0.980 \pm 0.001 & 5.96134 \pm 0.0001 \\ \hline
+    0.8063 \pm 0.0001 & 0.865 \pm 0.001 & 1.000 \pm 0.001 & 7.90174 \pm 0.0001 \\ \hline
+    1.0063 \pm 0.0001 & 0.865 \pm 0.001 & 1.010 \pm 0.001 & 9.86174 \pm 0.0001 \\ \hline
+    1.2030 \pm 0.0001 & 0.865 \pm 0.001 & 1.025 \pm 0.001 & 11.7894 \pm 0.0001 \\ \hline
+    \end{tabular}
+    \end{table}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.4}\\
+    \text{Tabla Esfuerzo vs. Deformación unitaria}\\
+    
+        \begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+    Esfuerzo (Pa)        & Deformación Unitaria \\ \hline
+    35800000 \pm 1400000   & 0.052 \pm 0.002        \\ \hline
+    66000000 \pm 3000000   & 0.075 \pm 0.002        \\ \hline
+    96000000 \pm 4000000   & 0.098 \pm 0.002        \\ \hline
+    121000000 \pm 5000000  & 0.133 \pm 0.002        \\ \hline
+    161000000 \pm 6000000  & 0.156 \pm 0.002        \\ \hline
+    201000000 \pm 8000000  & 0.168 \pm 0.003        \\ \hline
+    240000000 \pm 10000000 & 0.185 \pm 0.003        \\ \hline
+    \end{tabular}
+    \end{table}
+\end{figure}
+
+
+
+    
+    \begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.5}\\
+    \text{Gráfica Velocidad vs Tiempo}\\
+\includegraphics[scale=0.35]{637efc8a-f8ce-4767-b0d0-67b47720a538.jpg}
+    \caption*{Fuente: Elaboración Propia, 2023}
+\end{figure}
+
+\negthinspace
+Con los datos obtenidos se encontró el modelo matemático del esfuerzo en función de la deformación unitaria es de:
+\begin{center}
+    $\ \sigma (\xi) = 1110000000 * 
+    \xi $\\
+    \end{center}
+    
+    \hfill \break
+     \begin{figure}[H]
+        \centering
+        \textbf{Figura No.1.6}\\
+        \text{Tabla módulo de Young Experimental vs Teórico.}\\
+    \end{figure}
+\begin{table}[H]
+\centering
+\resizebox{9cm}{!} {
+\begin{tabular}{|l|l|l|l|}
+\hline
+Modulo de Young Experimental (Pa) & Modulo de Young Teórico  (Pa) \\ \hline
+1110000000 \pm 70000000             & 1300000000 \pm 500000000        \\ \hline
+\end{tabular}
+}
+\end{table}
+
+    \begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.7}\\
+    \text{Gráfica de Incertezas módulo de Young Experimental vs Teórico.}\\
+       \includegraphics[scale=0.32]{5bd41a34-13d9-4819-bdcb-de7cb4274cb2.jpg}
+    \caption*{Fuente: Elaboración Propia, 2023} 
+\end{figure}
+
+\section{Discusión de Resultados}
+En la práctica No.4 titulada Elasticidad utilizando un hilo de cañamo se llevó a cabo la prueba de elasticidad, donde este se sometió a prueba sosteniendo 7 masas para lo cual se observó que el nivel de deformación del hilo depende de el peso que tenga la masa, esto se puede ver reflejado en la figura No 1.5 la cual relaciona el esfuerzo con la deformación unitaria, el dato obtenido también se relaciona con la pendiente mostrada en la gráfica al utilizar los datos brindados por esta gráfica se  calculó el modelo matemático utilizando la ecuación 4.1 brindada en el manual de Laboratorio de Física para después comparar el resultado obtenido, con el experimental y realizar el diagrama de incertezas para que se observe la diferencia gráficamente. 
+
+Se observó una gran incerteza entre ambos datos para lo cual concluimos, existen varios factores que afectan el resultado experimental ya que al momento de tomar datos, influye la gravedad la cual nos dictará  que tanta fuerza tiene el objeto, esto no se toma en cuenta en el Modulo de Young experimental, pero si se toma en cuenta en el teórico, por eso difieren en la incerteza. 
+
+\section{Conclusiones}
+\raggedbottom
+\begin{itemize}
+\item[$\bullet$] 
+ Se calculo el esfuerzo en el cual se involucra el hilo de cañamo, por medio de la ecuacion de division de la fuerza que se aplica sobre un area.
+\smallskip
+\item[$\bullet$] 
+Se determino la deformacion del hilo, por medio de la ecuacion que define el cambio d longitud divido el valor inicial de longitud.
+\item[$\bullet$] 
+Se logro relaciones el esfuerzo empleado con la deformacion demostrando que mientras mas esfuerzo se efectua, mas deformacion existio.
+\item[$\bullet$] 
+Se explico y grafico el modelo de Young, relacionandolo de forma experimental y teorico, donde se expresa la rigidez y el comportamiento elastco que se toma, segun la direccion en la que se aplico la fuerza.
+\end{itemize}
+
+\section{Anexos}
+
+   \begin{figure}[H]
+    \centering
+    \textbf{Figura 1.8}
+   \caption*{Log de Qtiplot} 
+    \includegraphics[scale=0.60]{5c8ac771-7e56-4235-bf4e-eb904503c8c4.jpg}
+    \caption*{Fuente: Elaboración propia 2023}
+    \end{figure}
+    
+   \begin{figure}[H]
+    \centering
+    \textbf{Figura 1.9}
+     \caption*{log aceleración}  
+    \includegraphics[scale=0.55]{tensiones.png}
+    \caption*{Fuente: Elaboración propia 2023}
+    \end{figure}
+    
+    \begin{figure}[H]
+    \centering
+    \textbf{Figura 1.10}
+     \caption*{Cálculo de la velocidad Final} 
+    \includegraphics[scale=0.5]{esfuerzo.png}
+    \caption*{Fuente: Elaboración propia 2023}
+    \end{figure}
+
+
+
+\begin{thebibliography}{99}
+%Las fuentes de consulta se citan en forma organizada y homogÃ©nea, tanto de los libros, de los artículos y, en general, de las obras consultadas, que fueron indispensables indicar o referir en el contenido del trabajo.
+
+\bibitem{} SERWAY, RAYMOND. A. (Tomo 1, 7ª edi). (Bogotá, 2008).  Física. McGraw-Hill.
+
+\bibitem{}Ohanian, H.Markert, J. (Volumen 1. Tercera edición). (New York-London, 2007).: Física para ingeniería y ciencias. W. W. Norton  Company, Inc. 
+
+\bibitem{} Reckdahl, K.(Versión [3.0.1]). (2006). Using Imported Graphics in LATEX and pdfLATEX.
+
+\url{https://acortar.link/P5rkRR}
+
+\url{https://acortar.link/DC0rDz}
+
+\url{https://acortar.link/UDmFgl}
+\end{thebibliography}
+\end{document}

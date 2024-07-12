@@ -1,0 +1,322 @@
+\documentclass[osajnl,twocolumn,showpacs,superscriptaddress,10pt]{revtex4-1}
+%
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%
+%Paquete de Idioma
+\usepackage[spanish]{babel}
+%
+%CodificaciÃ³n Alfabeto
+\usepackage[utf8]{inputenc}
+%
+%CodificaciÃ³n de Fuente
+\usepackage[T1]{fontenc}
+%
+%Ãndice
+\usepackage{makeidx}
+%
+%GrÃ¡ficos
+\usepackage{graphicx}
+\usepackage{subfig}
+%\usepackage{xcolor} 
+%
+%MatemÃ¡tica
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{amstext} 
+%
+%Estilo de PÃ¡gina NumeraciÃ³n superior
+%\pagestyle{headings}
+%
+%Hiperlinks \href{url}{text}
+\usepackage[pdftex]{hyperref}
+%
+%Graficos y tablas
+\usepackage{multirow}
+%\usepackage{multicol}
+\usepackage{float}
+\usepackage{booktabs}
+%
+\decimalpoint
+%\bibliographystyle{IEEEtran}
+%\bibliography{IEEEabrv,mybibfile}
+%
+%
+\begin{document}
+%Titulo
+\title{Práctica 5:  Principio de Arquímides}
+\thanks{Laboratorios de Física}
+
+\author{Agnnes Maria, Wellmann Salvador, 202100186}\email{e-mail:3705174660101@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, Zona 12, Guatemala.
+}%
+\author{Diego Andres Rivera Noriega, 202100164}\email{e-mail: 3734436760101@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, Zona 12, Guatemala.
+}%
+\author{Joab Israel, Ajsivinac Ajsivinac, 202200135}\email{e-mail: 3114791110409@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, 
+}%
+\author{Dominic Juan Pablo, Ruano Perez, 202200075}\email{e-mail: 3863542270101@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, 
+}%
+\author{Javier Andrés, Monjes Solórzano, 202100081}\email{e-mail: 3020696740101@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, Zona 12, Guatemala.
+}%
+%\collaboration{MUSO Collaboration}%\noaffiliation
+
+%\date{\today}%
+
+%Resumen
+
+\maketitle{}
+\section{Resultados}
+
+    \begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.1}\\
+    \text{Tabla de los datos obtenidos}\\
+    
+        \begin{table}[H]
+    \centering
+    \resizebox{9cm}{!} {
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+    Objeto & \Fuerza Boyante (N) & \Delta Fuerza Boyante (N) \\ \hline
+    Cubo Plateado (Aluminio)    & 0.095         &         0.02            \\ \hline
+    Esfera Plateada (Metálica)    & 0.042         &         0.02            \\ \hline
+    Cilindro Plateado (Aluminio)    & 0.045         &         0.02             \\ \hline
+    Cilindro Dorado (Metálico)   & 0.127        &        0.02             \\ \hline
+    Cilindro Rojo (Plástico)    & 0.535         &         0.02             \\ \hline
+    \end{tabular}
+    }
+    \end{table}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.2}\\
+    \text{Tabla Esfuerzo vs. Deformación unitaria}\\
+    
+        \begin{table}[H]
+    \centering
+    \resizebox{9cm}{!} {
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+    Objeto & Masa (Kg) & Volumen Desplazado (m^3) \\ \hline
+    Cubo Plateado (Aluminio)    & 0.025 \pm 0.02         &         0.0000097 \pm 0.0000002            \\ \hline
+    Esfera Plateada (Metálica)    & 0.040 \pm 0.02         &         0.0000043 \pm 0.0000002            \\ \hline
+    Cilindro Plateado (Aluminio)    & 0.025 \pm 0.02         &         0.0000046 \pm 0.0000002             \\ \hline
+    Cilindro Dorado (Metálico)   & 0.115 \pm 0.02        &        0.0000129 \pm 0.0000002             \\ \hline
+    Cilindro Rojo (Plástico)    & 0.075 \pm 0.02        &         0.0000545 \pm 0.0000002             \\ \hline
+    \end{tabular}
+    }
+    \end{table}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.3}\\
+    \text{Tabla Esfuerzo vs. Deformación unitaria}\\
+    
+        \begin{table}[H]
+    \centering
+    \resizebox{9cm}{!} {
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+Objeto            & Material & Densidad Teórica & Densidad Experimental \\ \hline
+Cubo Plateado     & Aluminio & 2700             & 2600 \pm 300              \\ \hline
+Esfera Plateada   & Metalica & 7800             & 9300 \pm 900              \\ \hline
+Cilindro Plateado & Aluminio & 2700             & 5400 \pm 700              \\ \hline
+Cilindro Dorado   & Metalico & 7800             & 2110 \pm 70               \\ \hline
+Cilindro Rojo     & Plastico & 920              & 1370 \pm 40               \\ \hline
+    \end{tabular}
+    }
+    \end{table}
+\end{figure}
+
+
+
+    
+    \begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.4}\\
+    \text{Gráfica de incertezas de las Densidades teóricas vs Densidades }\\
+    \text{Experimentales No.1}
+\includegraphics[scale=0.35]{Grafica Incerteza Aluminio 1.png}
+    \caption*{Fuente: Elaboración Propia, 2023}
+\end{figure}
+    \end{center}
+
+        \begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.5}\\
+    \text{Gráfica de incertezas de las Densidades teóricas vs Densidades }\\
+    \text{Experimentales No.2}
+\includegraphics[scale=0.35]{Grafica Incerteza Metal 1.png}
+    \caption*{Fuente: Elaboración Propia, 2023}
+\end{figure}
+    \end{center}
+
+            \begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.6}\\
+    \text{Gráfica de incertezas de las Densidades teóricas vs Densidades }\\
+    \text{Experimentales No.3}
+\includegraphics[scale=0.35]{Grafica Incerteza Aluminio 2.png}
+    \caption*{Fuente: Elaboración Propia, 2023}
+\end{figure}
+    \end{center}
+            \begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.7}\\
+    \text{Gráfica de incertezas de las Densidades teóricas vs Densidades }\\
+    \text{Experimentales No.4}
+\includegraphics[scale=0.35]{Grafica Incerteza Metal 2.png}
+    \caption*{Fuente: Elaboración Propia, 2023}
+\end{figure}
+    \end{center}
+            \begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.8}\\
+    \text{Gráfica de incertezas de las Densidades teóricas vs Densidades }\\
+    \text{Experimentales No.5}
+\includegraphics[scale=0.35]{Grafica Incerteza Plastico.png}
+    \caption*{Fuente: Elaboración Propia, 2023}
+\end{figure}
+    \end{center}
+
+
+\section{Discusión de Resultados}
+\begin{itemize}
+    \item[] En está práctica se determinó la Fuerza Boyante, el volumen desplazado y las masas de cada objeto utilizado con sus debidas incertezas para calcular la densidad ed los mismos. Respecto a la Tabla No.1, los datos que se encuentran; representan a las fuerzas boyantes que se generaron cuando cada objeto se sumergió en el líquido. Se obtuvieron cinco fuerzas boyantes diferentes para cinco objetos de distintos materiales. Estas fuerzas se obtuvieron mediante una ecuación deducida por el comportamiento del objeto al entrar en contacto con el líquido. La incerteza, fue obtenida mediante una propagación de error y es apreciable decir que se obtuvo 0.098 para todas, ya que solo se sumaban las incertezas del dinamómetro.
+     \item []Por otro lado, en la Tabla No.2 se encuentran los volúmenes desplazados, los cuales se refieren al cambio de volumen del líquido cuando los objetos fueron introducidos. Todos los volúmenes se trabajaron en unidades de $m^3$ lo cual se apreció porque, todos los volúmenes calculados, resultaron ser magnitudes muy pequeñas, al igual que sus incertezas.
+    \item[] Se determinó el empuje con la Tabla No.1 y el volumen desplazado de esta forma en la tabla No.2, se realizó el cálculo de la densidad en la tabla No.3. Se observó que, al calcular los datos intermedios, como la fuerza de empuje y el volumen desplazado para determinar las densidades de cada objeto, eran dependientes del peso del objeto tanto en el agua como cuando estaban en el aire. Esto nos hace darnos cuenta que según  el principio de Arquímedes describe cómo los objetos interactúan con los fluidos en los que están sumergidos y es fundamental para entender el comportamiento de los objetos en el agua y otros fluidos.
+    \item[]Se determinó la densidad para cada objeto analizado, se asignó un material dependiendo el valor de la densidad, sin embargo, este material pudo no ser el adecuado debido a que la incerteza de la densidad experimental fue bastante amplia por lo tanto el material asignado puede no ser el real.
+    
+    \item[] También se buscó la determinación de la densidad de los 5 diferentes materiales, y se observó que la mayoría de los resultados experimentales estuvieron cercanos a los teóricos, esto demostró que la experimentación tuvo, en ocasiones, un alto grado de exactitud. Algo importante a resaltar es que las respuestas obtenidas mostraron un amplio margen de error. 
+    \item[] Se comprobó que el principio de Arquímedes es un teorema fundamental para encontrar la densidad de cualquier objeto, y así con ello predecir el material del que fue fabricado
+    
+    
+\end{itemize}
+\section{Anexos}
+\subsection{Muestra de Cálculo}
+Con la Ecuación: $B = w_{aire}-w_{fluido}=pgV_d$ utilizando los pesos de la siguiente forma:
+\end{itemize}
+\begin{itemize}
+    \item[]Donde
+\item  B= Fuerza Boyante o de empuje ($N$)
+\item  $w_{aire}$= Peso del objeto en el aire ($N$)
+\item  $w_{fluido}$ = Peso del objeto sumergido en el gluido(agua)($N$)
+\item[]Con los datos de $w$
+\item $w_{aire}= 0.245N$
+\item $w_{fluido}= 0.150N$
+\item[] \begin{equation}
+        B=w_{aire}-w_{fluido}
+    \end{equation} 
+    \item[] \begin{equation}
+        B(N)
+    \end{equation} 
+
+\item[] La incerteza es:
+\item[] \begin{equation}
+        \Delta B =\pm (\Delta W_{aire} + \Delta w_{fluido})
+    \end{equation} 
+\item[]Donde: $\Delta W_{aire} y \Delta w_{fluido}$ son iguales, ya que fueron medidos con el mismo instrumento.
+
+\item[] Al despejar $V_d$ de la ecuación $B = w_{aire}-w_{fluido}=pgV_d$ se obtiene lo siguiente:
+\item[]\begin{equation}
+        \frac{B}{pg}=V_d
+    \end{equation} 
+\item[]Donde:
+\item  B= Fuerza Boyante($N$)
+\item  $p$= Densidad del fluido donde se sumergió (agua=$1000kg/m^3$)
+\item  $g$ = Gravedad $9.8 m/s^2$
+\item[]Sustiyendo la fuerza Boyante de $m_1$ y conservando la incerteza, ya que se esta operando entre constantes.
+\item[]Con la fórmula del peso:
+\item[]\begin{equation}
+        w=mg
+    \end{equation} 
+\item[]Donde el w es $w_{aire}$, al dividirlo entre la gravedad, da como resultado la masa y al estar operandose entre constantes, la incerteza del peso se conserva.
+\item[]\begin{equation}
+        \frac{w_{aire}}{g}=m
+    \end{equation} 
+\item[]La densidad es la relacion entre la masa($kg$) y el volúmen($m^3$):
+\item[]\begin{equation}
+        p=\frac{m}{V}
+    \end{equation} 
+\item[]La incerteza de la densidad:
+\item[]\begin{equation}
+        \Delta p=p(\frac{\Delta m}{m}+\frac{\Delta V}{V})
+    \end{equation} 
+\item[]Donde:
+\item  $p$= Densidad medida.
+\item  $\Delta m$= Incerteza de la masa.
+\item  $m$ = Masa utilizada en el cálculo de la densidad.
+\item  $\Delta V$= Incerteza del volúmen.
+\item  $V$ = Volúmen utilizado en el cálculo de la dnsidad.
+\end{itemize}
+   \begin{figure}[H]
+    \centering
+    \textbf{Figura 1.9}
+   \caption*{Cálculo de las Boyantes} 
+    \includegraphics[scale=0.50]{calculo de Boyantes.png}
+    \caption*{Fuente: Elaboración propia 2023}
+    \end{figure}
+    
+   \begin{figure}[H]
+    \centering
+    \textbf{Figura 1.10}
+     \caption*{Cálculo de Masas}  
+    \includegraphics[scale=0.50]{calculoMasas.png}
+    \caption*{Fuente: Elaboración propia 2023}
+    \end{figure}
+    
+    \begin{figure}[H]
+    \centering
+    \textbf{Figura 1.11}
+     \caption*{Cálculo del volumén desplazado} 
+    \includegraphics[scale=0.42]{volumenDesplazado1.png}
+    \caption*{Fuente: Elaboración propia 2023}
+    \end{figure}
+
+\begin{figure}[H]
+    \centering
+    \textbf{Figura 1.12}
+     \caption*{Cálculo del volumén desplazado} 
+    \includegraphics[scale=0.42]{volumenDesplazado2.png}
+    \caption*{Fuente: Elaboración propia 2023}
+    \end{figure}
+
+    \begin{figure}[H]
+    \centering
+    \textbf{Figura 1.13}
+     \caption*{Cálculo de densidades} 
+    \includegraphics[scale=0.42]{densidades1.png}
+    \caption*{Fuente: Elaboración propia 2023}
+    \end{figure}
+
+     \begin{figure}[H]
+    \centering
+    \textbf{Figura 1.14}
+     \caption*{Cálculo de densidades} 
+    \includegraphics[scale=0.5]{densidades2.png}
+    \caption*{Fuente: Elaboración propia 2023}
+    \end{figure}
+\begin{thebibliography}{99}
+%Las fuentes de consulta se citan en forma organizada y homogÃ©nea, tanto de los libros, de los artículos y, en general, de las obras consultadas, que fueron indispensables indicar o referir en el contenido del trabajo.
+
+\bibitem{} SERWAY, RAYMOND. A. (Tomo 1, 7ª edi). (Bogotá, 2008).  Física. McGraw-Hill.
+
+\bibitem{}Ohanian, H.Markert, J. (Volumen 1. Tercera edición). (New York-London, 2007).: Física para ingeniería y ciencias. W. W. Norton  Company, Inc. 
+
+\bibitem{} Reckdahl, K.(Versión [3.0.1]). (2006). Using Imported Graphics in LATEX and pdfLATEX.
+
+\url{https://acortar.link/P5rkRR}
+
+\url{https://acortar.link/DC0rDz}
+
+\url{https://acortar.link/UDmFgl}
+\end{thebibliography}
+\end{document}

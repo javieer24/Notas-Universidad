@@ -1,0 +1,27 @@
+ PRACTICA 1: CINEMÁTICA DEL MOVIMIENTO CIRCULAR UNIFORMEMENTE VARIADO:
+
+Pasos a seguir en Tracker:
+
+1. Abrir un documento nuevo en tracker
+2. Importar video a analizar.
+3. Rotar y colocar una buena visualización del objeto a seguir, Recortar vídeo.
+4. Añadir un eje coordenado de acuerdo a nuestra conveniencia.
+5. Colocamos una vara de calibración. (0.255 m el diámetro del disco más grande, 1 m para la regla de madera, 
+0.100 m para la regla del video de la carpeta).
+6. Crear una masa puntual nueva.
+7. Ctrl+shift+clic para seleccionar masa para autotracker.
+7.1 (Manual) Shift+clic en cada frame del video.
+
+Tomamos los datos y vamos a Qtiplot.
+
+1. Crear una tabla con los datos copiados de Tracker.
+2. Graficar los datos.
+3. Realizar los análisis a las gráficas:
+
+MODELOS MATEMÁTICOS (Fit Wizard):
+Lineal: 
+ 	y = 1/2 * a * t^2
+
+Rotacional:
+	y = 1/2 * alpha * t^2
+

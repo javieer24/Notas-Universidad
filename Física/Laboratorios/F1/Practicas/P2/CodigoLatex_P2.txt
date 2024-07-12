@@ -1,0 +1,380 @@
+\documentclass[osajnl,twocolumn,showpacs,superscriptaddress,10pt]{revtex4-1}
+%
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%
+%Paquete de Idioma
+\usepackage[spanish]{babel}
+%
+%CodificaciÃ³n Alfabeto
+\usepackage[utf8]{inputenc}
+%
+%CodificaciÃ³n de Fuente
+\usepackage[T1]{fontenc}
+%
+%Ãndice
+\usepackage{makeidx}
+%
+%GrÃ¡ficos
+\usepackage{graphicx}
+\usepackage{subfig}
+%\usepackage{xcolor} 
+%
+%MatemÃ¡tica
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{amstext} 
+%
+%Estilo de PÃ¡gina NumeraciÃ³n superior
+%\pagestyle{headings}
+%
+%Hiperlinks \href{url}{text}
+\usepackage[pdftex]{hyperref}
+%
+%Graficos y tablas
+\usepackage{multirow}
+%\usepackage{multicol}
+\usepackage{float}
+\usepackage{booktabs}
+%
+\decimalpoint
+%\bibliographystyle{IEEEtran}
+%\bibliography{IEEEabrv,mybibfile}
+%
+%
+\begin{document}
+%Titulo
+\title{Práctica 2: Momentos de Inercia}
+\thanks{Laboratorios de Física}
+
+\author{Agnnes Maria, Wellmann Salvador, 202100186}\email{e-mail:3705174660101@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, Zona 12, Guatemala.
+}%
+\author{Diego Andres Rivera Noriega, 202100164}\email{e-mail: 3734436760101@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, Zona 12, Guatemala.
+}%
+\author{Joab Israel, Ajsivinac Ajsivinac, 202200135}\email{e-mail: 3114791110409@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, 
+}%
+\author{Dominic Juan Pablo, Ruano Perez, 202200075}\email{e-mail: 3863542270101@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, 
+}%
+\author{Javier Andrés, Monjes Solórzano, 202100081}\email{e-mail: 3020696740101@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, Zona 12, Guatemala.
+}%
+%\collaboration{MUSO Collaboration}%\noaffiliation
+
+%\date{\today}%
+
+%Resumen
+\begin{abstract}
+
+Se determinó de manera experimental el momento de inercia de una esfera que se movía sobre un plano inclinado. Se armó un sistema de plano inclinado y se midió el tiempo que tardaba una esfera en recorrer dicho sistema (plano). Se realizó un análisis en el software Tracker y se graficaron dichos datos en Qtiplot, para obtener una gráfica con una tendencia parabólica y un valor para la aceleración lineal. Con la aceleración lineal y la distancia recorrida se calculó la velocidad final de la esfera al salir del plano inclinado, y con dicha velocidad se procedió a calcular la inercia experimental despejándola de la ecuación de conservación de la energía. Se calculó también una inercia teórica a través de la ecuación de inercia para una esfera sólida. Se analizaron y compararon ambas inercias obtenidas a través de tablas y diagramas de incertezas.
+\end{abstract}
+
+\maketitle{}
+
+\section{Objetivos}
+
+\subsection{Generales}
+\begin{itemize}
+\item[$\bullet$]Determinar el momento de inercia de una esfera de acero.
+\end{itemize}
+\subsection{Específicos}
+\begin{itemize}
+\item[*]Deducir la aceleración con la que se mueve la esfera sobre el plano inclinado. 
+\item[*] Determinar la velocidad final alcanzada por la esfera en el borde del plano.
+\item[*] Determinar el momento de inercia experimental y compararlo con el momento de inercia teórico pro- porcionado.
+\end{itemize}
+ 
+\section{Marco Teórico}
+\subsection{Específicos}
+\begin{itemize}
+\item[]
+La inercia rotacional se manifiesta por la tendencia de los cuerpos que giran a mantener su velocidad
+angular, es decir, a mantener la velocidad del gi- ro. La manera en que se distribuye la masa en el cuerpo de cualquier forma geométrica y la distan- cia entre esta masa al eje de giro son las variables
+importantes al calcular el momento de inercia de un cuerpo.
+\item[]La inercia de rotación depende por, sobre todo, de
+la distribución de la masa en torno al eje de giro. Cuando la masa está más lejos del centro, la inercia
+será más alta, es decir, costará más hacerlo girar o detenerlo. En cambio, si la masa está situada más cerca del centro, la inercia será menor ya que se- rá más fácil sacar al cuerpo del estado de reposo
+o rotación. Para poder determinar o demostrar el momento de inercia de una partícula se inicia desde
+la ley de la conservación de la energía.
+\item[] \begin{equation*}
+        E_o=Ef
+\end{equation*}
+
+\end{itemize}
+\begin{itemize}
+\item[] Donde cada E representa la energía mecánica del sistema al principio y al final del movimiento. E
+está definida por: se dé K es la energía cinética del sistema en este caso la energía cinética rotacional Kt más la energía cinética de traslación Kt y, U
+es la energía potencial gravitacional respecto a un marco de referencia determinado:
+\item[]
+     \begin{equation*}
+       K=Kr+Kt
+     \end{equation*}
+\item[]
+\begin{equation*}
+    U=mgh
+\end{equation*}
+     \item[]Donde cm representa que es respecto del centro de masa Al sustituir las ecuaciones y quitar las que se cancelan por el marco de referencia queda:
+
+     \item[]
+     \begin{equation*}
+         Mgh={\frac{1}{2}IcmW^2}+{\frac{1}{2}mvcm}  
+     \end{equation*}
+     \item[]Esto se da bajo la condición que la esfera no se desliza sobre el plano en el que se mueve y, por tanto:
+        \begin{equation*}
+            W={\frac{Vcm}{r}}
+        \end{equation*}
+
+        \item[]Al despejar la inercia y sustituir W queda:
+        \begin{equation*}
+            Icm=mr^2({\frac{2gh}{v}}2cm-1)
+        \end{equation*}
+        \item[]Por otro lado, también se sabe que la inercia de una esfera es equivalente a decir:
+        \item[]
+        \begin{equation*}
+            I={\frac{2}{5mr^2}}
+        \end{equation*}
+        \item[]Un objeto rígido no es deformable; es decir, las ubicaciones relativas de todas las partículas de que está compuesto permanecen constantes. Todos los objetos reales son deformables en cierta medida; no obstante, el modelo de cuerpo rígido es útil en muchas situaciones en que la deformación es despreciable. La característica principal del movimiento circular uniformemente varia- do, es que la aceleración angular permanece constante; es decir:
+        \item[]
+        \begin{equation}
+            {\frac{d^2\theta}{d^2t}}={\frac{d\omega}{dt}}=\alpha==cte
+        \end{equation}
+        \item[]De la expresión anterior se puede deducir las funciones que describen la rapidez angular $(\omega)$ y la posición angular$(\theta)$ del cuerpo, obteniendo:
+         \item[]\begin{equation}
+            \omega(t)=\omega_0 +\alpha{t}
+        \end{equation}
+          \item[]\begin{equation}
+           \theta(t)= \theta_0 +\omega_0t+{{\frac{1}{2}}\alpha t^2}
+        \end{equation}
+           \item[] Todo movimiento circular uniformemente variado debe obedecer las ecuaciones anteriores; con la condición de que el tiempo sea mayor que cero $(t > 0)$. Dado que la función $\theta(t)$ es cuadrática respecto al tiempo, se puede demostrar que la rapidez angular instantánea en el tiempo $t_n$ es igual a la rapidez angular media $\omega$ en el intervalo de tiempo $(t_{n-1} a t_{n+1})$.:
+            \item[]
+            \begin{equation}
+          \omega_n=\frac{\theta_{n+1}-\theta_{n-1}}{t_{n+1}-t_{n-1}}
+        \end{equation}
+             \item[]Es importante reconocer la analogía entre la energía cinética $\frac{1}{2}mv^2$ asociada con el movimiento traslacional y la energía cinética rotacional $\frac{1}{2}I\omega^2$ .
+            \item[]Las cantidades $I$ y $\omega$ en el movimiento rotacional son análogas a $m$ y $v$ en el movimiento traslacional, respectivamente. El momento de inercia es una medida de la tendencia de un cuerpo a cambios en su movimiento rotacional, tal como la masa es una medida de la tendencia de un cuerpo a resistir cambios en su movimiento traslacional.
+            \item[]
+            \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.08]{Figura 2.1 Diagrama del diseÃ±o experimental.png}
+                  \caption*{Figura 2.1: Diagrama del diseño experimental}
+                \caption*{Fuente: Manual Laboratorio Física 1}
+            \end{figure}
+            \item[]En la figura 1, muestra una esfera de acero que rueda sin deslizamiento por un plano inclinado, usando métodos de energía, la esfera de acero y tierra se modelan como un sistema aislado sin fuerzas no conservativas en acción, la rapidez del centro de masa de la esfera de acero en la parte más baja del plano esta dada por
+            \item[] 
+            \begin{equation}
+                v_{CM}=(\frac{2gh}{I_{CM}/MR^2})^\frac{1}{2}
+            \end{equation}
+            \item[]el momento de inercia de la esfera de acero, despejando $I_{CM}$ de la ecuación 5, está dado por:
+            \item[]    \begin{equation}
+                I_{CM}=(\frac{2gh}{v^2_{CM}}-1)MR^2
+            \end{equation}
+            \item[] El momento de inercia de una esfera sólida de masa M y radio R, usando la definición
+            \item[] 
+            \begin{equation}
+                I_{CM}= \int r^2dm
+            \end{equation}
+            \item[]
+            \begin{equation}
+                I_{CM}=(\frac{2}{5})MR^2
+            \end{equation}
+
+            
+\end{itemize}
+\section{Diseño Experimental}
+\subsection{Materiales}
+\begin{itemize}
+\item[*] Una esfera de acero
+\item[*] Un tablero de madera
+\item[*] Dos trozos de madera 
+\item[*] Un cronómetro
+\item[*] Una cinta  métrica o metro
+\end{itemize}
+\subsection{Magnitudes físicas a medir}
+\begin{itemize}
+\item[*] El diámetro de la esfera.
+\item[*] La masa de la esfera
+\item[*] El tiempo que realiza la esfera para dar $n$ vueltas utilizando el cronometro digital.
+\end{itemize}
+
+\subsection{Procedimiento}
+\begin{enumerate}
+\item[*] Se montó el equipo con el que se iba a trabajar como se muestra a continuación:
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{Figura 2.2.png}
+     \caption*{Figura 2.2}
+    \caption*{Fuente: Manual Laboratorio Física 1}
+    \end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{Figura 2.3.png}
+    \caption*{Figura 2.3}
+    \caption*{Fuente: Manual Laboratorio Física 1}
+    \end{figure}   
+\item[*] Se colocó el tablero horizontalmente sobre la mesa de trabajo verificado que la esfera se encuentre en reposo en cualquier posición sobre el tablero.
+\item[*] Se comprobó que la esfera tuviese una trayectoria rectilínea sobre el tablero.
+\item[*] Se seleccionó un sistema de referencia, para medir la posición de cada vuelta de la esfera, en una cinta de papel.
+\item[*] Partiendo del reposo, se soltó esfera desde la posición donde iniciaba cada vuelta.
+\item[*] SeSe tomó el tiempo que le llevó a la esfera dar una, dos, tres, cuatro, cinco y seis vueltas.
+\item[*] Se midió el diámetro y masa de la esfera.
+\end{enumerate}
+  
+\section{Resultados}
+
+    \begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.3}\\
+    \text{Tabla de los datos experimentales obtenidos}\\
+    
+        \begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+                  &  Dato  & Incerteza \\ \hline
+    Diámetro (mm) & 22     & \pm 0.1    \\ \hline
+    Altura (m)    & 0.0250 &           \\ \hline
+    Masa (g)      & 44     & \pm 0.01   \\ \hline
+    \end{tabular}
+    \end{table}
+\end{figure}
+    
+    \begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.4}\\
+    \text{Gráfica Velocidad vs Tiempo}\\
+\includegraphics[scale=0.35]{graficaDesplazamiento.png}
+    \caption*{Fuente: Elaboración Propia, 2023}
+\end{figure}
+
+\negthinspace
+Con los datos obtenidos se encontró la aceleración es de:
+\begin{center}
+    $\ a = 0.1651 \pm 0.0004  \frac{m}{s^2} $\\
+    \end{center}
+Utilizando la ecuación $\ v_{f} = a*t $\\ se obtuvo la velocidad de la esfera al finalizar su recorrido, el cual es de: 
+ 
+\begin{center}
+    $\ v_{f} = 0.5234 \pm 0.0004  \frac{m}{s} $\\
+    \end{center}
+    \hfill \break
+     \begin{figure}[H]
+        \centering
+        \textbf{Figura No.1.5}\\
+        \text{Tabla Inercia Experimental vs Inercia Teórica.}\\
+    \end{figure}
+\begin{table}[H]
+\centering
+\resizebox{9cm}{!} {
+\begin{tabular}{|l|l|l|l|}
+\hline
+$I_e_x_p$  (Kg M^2) & \Delta	$I_e_x_p$ (Kg M^2) & $I_t_e_o_r_i_c_o$  (Kg M^2) & \Delta	$I_t_e_o_r_i_c_o$ (Kg M^2) \\ \hline
+0.00000420 & 0.00000011 & 0.00000213 & 0.00000004 \\ \hline
+\end{tabular}
+}
+\end{table}
+
+    \begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.6}\\
+    \text{Gráfica de Incertezas Inercia Experimental vs Inercia Teórica}\\
+       \includegraphics[scale=0.42]{graficaIncertezas.png}
+    \caption*{Fuente: Elaboración Propia, 2023} 
+\end{figure}
+
+\section{Discusión de Resultados}
+En la práctica No.2 titulada "Momento de inercia" se determinó la inercia adquirida experimental y teoricamente por medio de las mediciones realizadas en las vueltas de la esfera, las cuales se utilizan para obtener la curva de la posición angular en función del tiempo, como se puede observar en la figura 1.4. Obteniendo estos resultados se procedió a calcular la velocidad de la esfera en el momento que termina su recorrido, utilizando la ecuación 2.2.Conociendo la altura de la esfera al momento de la sexta corrida se calculó el momento de inercia de la esfera. 
+
+Para el momento de inercia experimental se utilizo la gravedad del centro de masa, la altura, la masa, el radio y la gravedad. Ambos resultados se pueden observar en la figura 1.5 la cual muestra los datos tabulados y procedentemente en la figura 1.6 se observa la gráfica de incertezas del procedimiento teórico y experimental. Al momento de realizarlo teóricamente utilizamos la ecuación 2.8 en la cual se usa el valor  de la masa, la  incerteza de diámetro, el radio, y la incerteza de masa.
+
+Comparando los resultados de la inercia vemos que existe una  diferencia de 1.5e-06 entre ambos datos, la diferencia no es grande pero si significativa y  esta variación depende de que tan exacto se realizaron cada uno de los pasos del procedimiento brindado.
+
+
+\section{Conclusiones}
+\raggedbottom
+\begin{itemize}
+\item[$\bullet$] 
+ Se determinó que el momento de inercia para la
+esfera solida de acero es calculable tomando las siguientes siguientes
+condiciones: rodadura y despreciando el coeficiente de fricción de la superificie. Con estas consideraciones se puede obtener un valor lo suficientemente cercano a su valor teorico. Por lo tanto si es valido el metodo experimental para establecer su valor.
+\smallskip
+\item[$\bullet$] 
+Para la velocidad final se opero un valor experimental,obtenido del desarrollo y analisis de la toma de datos del movimiento de la esfera, y un valor constante propio de sus caracteristicas (radio).
+\item[$\bullet$] 
+Se determino que la aceleración con la que se mueva la esfera sobre el plano inclinado depende de la pendiente del plano.
+\item[$\bullet$] 
+Se determino el momento de inercia teórico y experimental, observando que existe una minima discrepancia entre sus valores, sin embargo de acuerdo a su valor de incerteza calculado para la inercia teorica, se puede aceptar, ya que, se encuentra dentro del rango permisible de error.
+\end{itemize}
+
+\section{Anexos}
+
+ \begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.145]{capturaTracker.png}
+    \caption*{Figura 2.3}
+    \caption*{Fuente: Elaboración propia 2023}
+    \end{figure}  
+
+   \begin{figure}[H]
+    \centering
+    \textbf{Figura 1.7}
+   \caption*{Aceleración angular} 
+    \includegraphics[scale=0.15]{CapturaQ1.png}
+    \caption*{Fuente: Elaboración propia 2023}
+    \end{figure}
+    
+   \begin{figure}[H]
+    \centering
+    \textbf{Figura 1.8}
+     \caption*{log aceleración}  
+    \includegraphics[scale=0.5]{log2.png}
+    \caption*{Fuente: Elaboración propia 2023}
+    \end{figure}
+    
+    \begin{figure}[H]
+    \centering
+    \textbf{Figura 1.9}
+     \caption*{Cálculo de la velocidad Final} 
+    \includegraphics[scale=0.5]{calculoaceleracion.png}
+    \caption*{Fuente: Elaboración propia 2023}
+    \end{figure}
+
+
+  \begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.10}\\
+   \caption*{Cálculo de la Inercia Expermiental }
+    \includegraphics[scale=0.25]{calculoIncertezaExperimental.png}
+     \caption*{Fuente: Elaboración propia 2023}
+\end{figure}
+\negthinspace
+\smallskip
+  \begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.11}\\
+     \caption*{Cálculo de la Inercia Teorica }
+    \includegraphics[scale=0.3]{calculoinerciaTeorica.png}
+    \caption*{Fuente: Elaboración propia 2023}
+\end{figure}
+
+
+
+\begin{thebibliography}{99}
+%Las fuentes de consulta se citan en forma organizada y homogÃ©nea, tanto de los libros, de los artículos y, en general, de las obras consultadas, que fueron indispensables indicar o referir en el contenido del trabajo.
+
+\bibitem{} SERWAY, RAYMOND. A. (Tomo 1, 7ª edi). (Bogotá, 2008).  Física. McGraw-Hill.
+
+\bibitem{}Ohanian, H.Markert, J. (Volumen 1. Tercera edición). (New York-London, 2007).: Física para ingeniería y ciencias. W. W. Norton  Company, Inc. 
+
+\bibitem{} Reckdahl, K.(Versión [3.0.1]). (2006). Using Imported Graphics in LATEX and pdfLATEX.
+
+\url{https://acortar.link/P5rkRR}
+
+\url{https://acortar.link/DC0rDz}
+
+\url{https://acortar.link/UDmFgl}
+\end{thebibliography}
+\end{document}

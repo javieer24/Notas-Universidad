@@ -1,0 +1,349 @@
+\documentclass[osajnl,twocolumn,showpacs,superscriptaddress,10pt]{revtex4-1}
+%
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%
+%Paquete de Idioma
+\usepackage[spanish]{babel}
+%
+%CodificaciÃ³n Alfabeto
+\usepackage[utf8]{inputenc}
+%
+%CodificaciÃ³n de Fuente
+\usepackage[T1]{fontenc}
+%
+%Ãndice
+\usepackage{makeidx}
+%
+%GrÃ¡ficos
+\usepackage{graphicx}
+\usepackage{subfig}
+%\usepackage{xcolor} 
+%
+%MatemÃ¡tica
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{amstext} 
+%
+%Estilo de PÃ¡gina NumeraciÃ³n superior
+%\pagestyle{headings}
+%
+%Hiperlinks \href{url}{text}
+\usepackage[pdftex]{hyperref}
+%
+%Graficos y tablas
+\usepackage{multirow}
+%\usepackage{multicol}
+\usepackage{float}
+\usepackage{booktabs}
+%
+\decimalpoint
+%\bibliographystyle{IEEEtran}
+%\bibliography{IEEEabrv,mybibfile}
+%
+%
+\begin{document}
+%Titulo
+\title{Práctica 3: Equilibrio de Cuerpos Rígidos}
+\thanks{Laboratorios de Física}
+
+\author{Agnnes Maria, Wellmann Salvador, 202100186}\email{e-mail:3705174660101@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, Zona 12, Guatemala.
+}%
+\author{Diego Andres Rivera Noriega, 202100164}\email{e-mail: 3734436760101@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, Zona 12, Guatemala.
+}%
+\author{Joab Israel, Ajsivinac Ajsivinac, 202200135}\email{e-mail: 3114791110409@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, 
+}%
+\author{Dominic Juan Pablo, Ruano Perez, 202200075}\email{e-mail: 3863542270101@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, 
+}%
+\author{Javier Andrés, Monjes Solórzano, 202100081}\email{e-mail: 3020696740101@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, Zona 12, Guatemala.
+}%
+%\collaboration{MUSO Collaboration}%\noaffiliation
+
+%\date{\today}%
+
+%Resumen
+\begin{abstract}
+
+En la práctica de equilibrio de cuerpos rígidos, se analizó la tensión de un hilo de cáñamo que se encontraba en un sistema en equilibrio, en el que se simuló una viga pivotada en un extremo, obteniendo datos de tensiones de forma: experimental y teórica. Se utilizó el software Qtiplot para analizar los datos tabulados con la cual se generó un modelo lineal definido por la tensión vs posición que mostró como varía la tensión del cable conforme se mueve la masa. Se comparó los datos obtenidos por las tensiones mediante un diagrama de incertezas y se analizó el dato más cercano al teórico.
+\end{abstract}
+
+\maketitle{}
+
+\section{Objetivos}
+
+\subsection{Generales}
+\begin{itemize}
+\item[$\bullet$]Determinar la tension del sistema el cual se encuentra en equilibrio
+\end{itemize}
+\subsection{Específicos}
+\begin{itemize}
+\item[*] Aplicar los conocimientos acerca de un sistema en equilibrio para construir tablas identificando las componentes del sistema
+\item[*] Determinar la tension experimentarl y compararlo con la tension teorica proporcionada.
+\item[*] Tener en cuenta la incerteza de los instrumentos empleados para encontrar la incerteza de la tension obtenida. 
+\end{itemize}
+ 
+\section{Marco Teórico}
+\begin{itemize}
+\item[]
+Todo cuerpo está en equilibrio si está en reposo o se mueve con velocidad constante en un marco de referencia inercial, como por ejemplo un puente colgante o un avión que vuela en línea recta a una altitud y rapidez constantes. EI principio físico fundamental es la primera ley de Newton: Si una partícula está en reposo o se mueve con velocidad constante (es decir a = 0), en un marco de referencia inercial la fuerza neta que actúa sobre ella debe ser cero, es decir que la suma vectorial de todas las fuerzas que actúan sobre el cuerpo debe ser cero.
+\item[] \begin{equation}
+        \Sigma \overrightarrow{F}=0
+\end{equation}
+\end{itemize}
+\begin{itemize}
+\item[] La cual es usual usarla en forma de componentes:
+\item[]
+     \begin{equation}
+        \Sigma F_x = 0
+     \end{equation}
+    \begin{equation}
+        \Sigma F_y = 0
+    \end{equation}
+    \begin{equation}
+    \Sigma F_z = 0
+    \end{equation}
+     \item[]Una segunda condición para que un cuerpo esté en equilibrio es que no debe tener tendencia a girar, es decir que un cuerpo rígido, en un marco de referencia inercial no este girando alrededor de un punto, dicho de otra forma la suma de torcas externas alrededor de cualquier punto debe ser cero:
+
+     \item[]
+     \begin{equation}
+          \Sigma \overrightarrow{\tau}=0 
+     \end{equation}
+     \item[]La cual también se puede expresar en forma de componentes:
+        \begin{equation}
+          \Sigma \tau_x = 0
+        \end{equation}
+        \begin{equation}
+            \Sigma \tau_y = 0
+        \end{equation}
+        \begin{equation}
+            \Sigma \tau_z = 0
+        \end{equation}
+        \item[]Las ecuaciones anteriores definen el equilibrio mecánico, para ello se requiere escoger un sistema de referencia (x,y,z) y dibujar en el sistema a estudiar cuales son todas las fuerzas que actúan sobre el sistema.
+        \item[]En la siguiente práctica se va a simular una viga por medio de una regla de masa $m$ pivoteada por uno de sus extremoso y del otro extremo unido a un alambre se pretende estudiar el efecto de la tensión en el alambre a medida que un objeto de masa $M$ cambia su posición $x$, considerando el eje $z$ saliendo del papel al hacer la tensión en la cuerda vale:
+        \item[]
+        \begin{figure}[H]
+                \centering
+                \includegraphics[scale=0.35]{Figura 3.1_ Diagrama donde se ilustran todas las fuerzas que actÃºan sobre el sistema.png}
+                  \caption*{Figura 3.1: Diagrama donde se ilustran todas las fuerzas que actúan sobre el sistema}
+                \caption*{Fuente: Manual Laboratorio Física 1}
+            \end{figure}
+         Analizando el sistema la ecuación del sistema seria:
+        \item[]Escribiendo las ecuaciones del sistema
+        \begin{equation}
+             TL sin(\theta)= {\frac{L}{2}-xMg}= 0
+        \end{equation}
+        \item[]Despejando la ecuación teórica para la tensión T:
+        \begin{equation}
+             T = {\frac{Mg}{Lsin(\theta)}+\frac{Mg}{2sin(\theta)} }= 0
+        \end{equation}
+        \end{itemize}
+\section{Diseño Experimental}
+\subsection{Materiales}
+\begin{itemize}
+\item[*] Un trípode en forma de V.
+\item[*] Una varilla de $75 cm$ y dos varillas de $25 cm$.
+\item[*] Tres mordazas universales.
+\item[*] Una pinza universal.
+\item[*] Una masa $M = 500g$ con gancho.
+\item[*] Un dinamómetro de 10 $N$
+\item[*]Regla métrica experimental (simulando una viga)
+\item[*] Una polea
+\end{itemize}
+\subsection{Magnitudes físicas a medir}
+\begin{itemize}
+\item[*] La distancia $x$ de la masa de $500g$ que cuelga, respecto al punto de pivote.
+\item[*] La tensión en el hilo medida por un dinamómetro.
+\item[*] El ángulo que forma el hilo con la viga horizontal.
+\item[*] La masa $M$ de la regla.
+\item[*] La longitud del la regla medida desde el punto del pivote.
+\item[*] La longitud del centro de la regla, medida desde el pivote.
+\end{itemize}
+
+\subsection{Procedimiento}
+\begin{enumerate}
+\item[*]  Se calibró el dinamómetro.
+\item[*]  Se armó el equipo como se muestra en la siguiente figura:
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{Figura 3.2.png}
+     \caption*{Figura 3.2}
+    \caption*{Fuente: Manual Laboratorio Física 1}
+     \caption*{Se aseguró que la polea se encuentre perfectamente vertical al igual que el dinamómetro, ya que de lo contrario se obtendrán medidas incorrectas.}
+    \end{figure}
+\item[*] Se midió el ángulo $\theta$ que forma el hilo con la regla.
+\item[*] Se midió la longitud de la regla medida desde el punto del pivote.
+\item[*] Se colgó en la primera marca de la regla una masa de $500g$, se observó que la regla se inclina un poco, para regresar a su posición horizontal, se aflojó la mordaza que sujeta al dinamómetro en la varilla vertical y se movió lentamente hacia abajo hasta que el nivel indique que se encuentra horizontalmente y se anotó: la tensión que mide el dinamómetro y la distancia a la que cuelga la masa.  
+\item[*] Se repitió el paso anterior colgando la masa en las diferentes marcas que posee la regla, la última marca de la regla fue en la medida arbitraria.
+
+\end{enumerate}
+  
+\section{Resultados}
+
+    \begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.3}\\
+    \text{Tabla de los datos experimentales obtenidos}\\
+    
+        \begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+                  &  Dato  & Incerteza \\ \hline
+    Diámetro (mm) & 22     & \pm 0.1    \\ \hline
+    Altura (m)    & 0.0250 &           \\ \hline
+    Masa (g)      & 44     & \pm 0.01   \\ \hline
+    \end{tabular}
+    \end{table}
+\end{figure}
+
+    \begin{figure}[H]
+        \centering
+        \textbf{Figura No.1.4}\\
+        \text{Tabla Posicion vs Tencion}\\
+            \begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|l|l|}
+    \hline
+    NO. &  Tencion (N)  & Posicion x (M) \\ \hline
+    1 & 0.8±0.1 &  0.060±0.001 \\ \hline
+    2 & 1.5±0.1 &  0.110±0.001 \\ \hline
+    3 & 2.0±0.1 &  0.160±0.001 \\ \hline
+    4 & 2.8±0.1 &  0.210±0.001 \\ \hline
+    5 & 3.4±0.1 &  0.260±0.001 \\ \hline
+    6 & 4.0±0.1 &  0.310±0.001 \\ \hline
+    Arbitraria  & 4.4±0.1 & 0.360±0.001 \\ \hline
+    \end{tabular}
+    \end{table}
+\end{figure}
+
+    
+    \begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.5}\\
+    \text{Gráfica Tensión vs Posición}\\
+\includegraphics[scale=0.35]{tension vs posicion.png}
+    \caption*{Fuente: Elaboración Propia, 2023}
+\end{figure}
+
+\negthinspace
+Con los datos obtenidos se encontraron los valores de A y B:
+\begin{center}
+    $\ A = 12.3 \pm 0.4 $\\
+    \end{center}
+    \begin{center}
+    $\ B = 0.12 \pm 0.09 $\\
+    \end{center}
+
+Usando los valores, la ecuacion del modelo matemático de la tensión en función de la posición es:
+
+\begin{center}
+    $\ T(x) = 12.3x + 0.12$ N\\
+    \end{center}
+
+Para la tensión Teorica se utilizo la ecuación:
+\begin{center}
+$T = \frac{Mg}{Lsin(\theta)}x+\frac{mg}{2sin(\theta)}$\\
+\end{center}
+Al utilizar los valores de la tabla, se obtiene que la tensión Teórica es de:
+\begin{center}
+    $\ T_{teorica} = 4.57 \pm 0.02 N$\\
+    \end{center}
+    \begin{figure}[H]
+        \centering
+        \textbf{Figura No.1.6}\\
+        \text{Tabla  comparativa Tensión}\\
+            \begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|l|l|}
+    \hline    
+        &  Tension (N)  & \Delta $_T_e_n_s_i_o_n_ ) \\ \hline
+    Tensión Teórica & 4.57 &  0.02 \\ \hline
+    Tensión Experimental 1 & 4.4 &  0.1 \\ \hline
+    Tensión Experimental 2 & 4.5 &  0.5 \\ \hline
+    \end{tabular}
+    \end{table}
+\end{figure}
+
+
+    
+
+% TABLA COMPARATIVA DE LAS TENSIONES
+
+ \begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.5}\\
+    \text{Gráfica de Incertezas}\\
+\includegraphics[scale=0.30]{incertezas.png}
+    \caption*{Fuente: Elaboración Propia, 2023}
+\end{figure}
+\section{Discusión de Resultados}
+En la práctica No. 3 titulada "\ Equilibrio de cuerpos rígidos" se calcularon los datos de la tensión teórica y tensión experimental del hilo utilizado en la practica. Para el cálculo de la tensión experimental, se tabularon los datos obtenidos de manera arbitraria como se observa en la figura 1.4 para después realizar la gráfica de tensión vs posición que se muestra en la figura 1.5, en la cual se observa que existe una relación directamente proporcional entre la posición y la tensión.
+
+Procedentemente se calculó la tensión teórica  utilizando los datos que nos brindó Qtiplot  en la figura 1.5 que se menciona en el parráfo anterior y la ecuación (11) que se muestra en el manual de Laboratorio de Física 1. Teniendo estos datos los tabulamos para realizar la tabla comparativa de tensión y hacer una comparación entre la tensión teórica y experimental, para lo cual nos apoyamos de la gráfica de incertezas de las 3 tensiones en donde se observa la diferencia entre cada dato. Concluyendo así en que dependiendo de su incerteza, el valor de la tensión arbitraria y tensión experimental, podrían llegar a coincidir ya que no se tiene una gran diferencia entre datos.
+
+
+\section{Conclusiones}
+\raggedbottom
+\begin{itemize}
+\item[$\bullet$] 
+ Se llevó a cabo un análisis detallado y se determinó la tensión del sistema en equilibrio mediante cálculos precisos y la aplicación de las leyes de equilibrio para cuerpos rígidos. Se comprobó que tanto la sumatoria de fuerzas como la sumatoria de momentos con respecto a un punto cualquiera eran cero.
+\smallskip
+\item[$\bullet$] 
+aplicando los conocimientos acerca de un sistema en equilibrio para construir tablas identificando las componentes del sistema en el contexto de Equilibrio de Cuerpos Rígidos, se logró una comprensión más profunda y detallada de cómo las fuerzas y momentos interactúan para mantener el equilibrio del cuerpo rígido. Esto permitió una mejor identificación y análisis de las componentes del sistema y su relación con el estado de equilibrio.
+\item[$\bullet$] 
+Se comparó los valores de las tensiones teorica, experimental 1, y experimental 2 demostrando que existe una ligera variación entre sus resultados. La tensión experimental 1 y teórica tiene cierta semejanza en sus datos, en su incerteza se puede obsesrvar que se acepta el error de los datos, sin embargo, la tensión Experimental 2 muestra una variación mayor en comparación con las 2 anteriores, debido a que este método es más inexacto y preciso. A pesar de este hecho, se tuvo una aproximación aceptable al valor teorico.
+\end{itemize} 
+
+\section{Anexos}
+
+   \begin{figure}[H]
+    \centering
+    \textbf{Figura 1.7}
+   \caption*{Log de Qtiplot} 
+    \includegraphics[scale=0.5]{log.png}
+    \caption*{Fuente: Elaboración propia 2023}
+    \end{figure}
+
+  \begin{figure}[H]
+    \centering
+    \textbf{Figura 1.7}
+   \caption*{Log de Qtiplot} 
+    \includegraphics[scale=0.2]{calculo TensionTeorica.png}
+    \caption*{Fuente: Elaboración propia 2023}
+    \end{figure}
+        
+   \begin{figure}[H]
+    \centering
+    \textbf{Figura 1.8}
+     \caption*{log aceleración}  
+    \includegraphics[scale=0.4]{Calculo TensionExperimental2.png}
+    \caption*{Fuente: Elaboración propia 2023}
+    \end{figure}
+
+\negthinspace
+\smallskip
+
+
+
+\begin{thebibliography}{99}
+%Las fuentes de consulta se citan en forma organizada y homogÃ©nea, tanto de los libros, de los artículos y, en general, de las obras consultadas, que fueron indispensables indicar o referir en el contenido del trabajo.
+
+\bibitem{} SERWAY, RAYMOND. A. (Tomo 1, 7ª edi). (Bogotá, 2008).  Física. McGraw-Hill.
+
+\bibitem{}Ohanian, H.Markert, J. (Volumen 1. Tercera edición). (New York-London, 2007).: Física para ingeniería y ciencias. W. W. Norton  Company, Inc. 
+
+\bibitem{} Reckdahl, K.(Versión [3.0.1]). (2006). Using Imported Graphics in LATEX and pdfLATEX.
+
+\url{https://acortar.link/P5rkRR}
+
+\url{https://acortar.link/DC0rDz}
+
+\url{https://acortar.link/UDmFgl}
+\end{thebibliography}
+\end{document}

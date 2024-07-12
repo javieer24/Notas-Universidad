@@ -1,0 +1,331 @@
+\documentclass[osajnl,twocolumn,showpacs,superscriptaddress,10pt]{revtex4-1}
+%
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%
+%Paquete de Idioma
+\usepackage[spanish]{babel}
+%
+%CodificaciÃ³n Alfabeto
+\usepackage[utf8]{inputenc}
+%
+%CodificaciÃ³n de Fuente
+\usepackage[T1]{fontenc}
+%
+%Ãndice
+\usepackage{makeidx}
+%
+%GrÃ¡ficos
+\usepackage{graphicx}
+\usepackage{subfig}
+%\usepackage{xcolor} 
+%
+%MatemÃ¡tica
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{amstext} 
+%
+%Estilo de PÃ¡gina NumeraciÃ³n superior
+%\pagestyle{headings}
+%
+%Hiperlinks \href{url}{text}
+\usepackage[pdftex]{hyperref}
+%
+%Graficos y tablas
+\usepackage{multirow}
+%\usepackage{multicol}
+\usepackage{float}
+\usepackage{booktabs}
+%
+\decimalpoint
+%\bibliographystyle{IEEEtran}
+%\bibliography{IEEEabrv,mybibfile}
+%
+%
+\begin{document}
+%Titulo
+\title{Laboratorio 1: Cinemática del Movimiento Circular Uniformemente Variado}
+\thanks{Laboratorios de Física}
+
+\author{Agnnes Maria, Wellmann Salvador, 202100186}\email{e-mail:3705174660101@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, Zona 12, Guatemala.
+}%
+\author{Diego Andres Rivera Noriega, 202100164}\email{e-mail: 3734436760101@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, Zona 12, Guatemala.
+}%
+\author{Joab Israel, Ajsivinac Ajsivinac, 202200135}\email{e-mail: 3114791110409@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, 
+}%
+\author{Dominic Juan Pablo, Ruano Perez, 202200075}\email{e-mail: 3863542270101@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, 
+}%
+\author{Javier Andrés, Monjes Solórzano, 202100081}\email{e-mail: 3020696740101@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, Zona 12, Guatemala.
+}%
+
+%\collaboration{MUSO Collaboration}%\noaffiliation
+
+%\date{\today}%
+
+%Resumen
+\begin{abstract}
+
+En el siguiente reporte de investigación se analizó, se comprendió y se calculó diferentes variables relacionadas al movimiento circular uniformemente variado (MCUV), en el cual se analizó una masa  bajando cierta distancia en cierto tiempo sujetada de una cuerda enredada en la rueda una rueda o  polea la cual se tomó de diferentes datos (su respectivo radio, tiempo en girar y diferenciales de altura);  datos los cuales se hicieron distintos cálculos de algunas variables, calculados mediante ecuaciones teóricas,  graficado en Qtiplot para determinar principalmente la aceleración radial de la polea al girar, la aceleración tangencial del sistema y con estos determinar el radio de la polea mediante la ecuacion1. Variables que al comparar podemos obtener el radio practico y el cuál se podrá observar en resultados que los datos satisfactoriamente toman coherencia.
+
+\end{abstract}
+
+\maketitle{}
+
+\section{Objetivos}
+
+\subsection{Generales}
+\begin{itemize}
+\item[$\bullet$] Visualizar las cantidades cinemáticas del movimiento de la polea que gira desde el reposo al mismo tiempo que cae una masa unida al eje de rotación por una cuerda.
+\end{itemize}
+\subsection{Específicos}
+\begin{itemize}
+\item[*] Comprobar si los modelos matemáticos se cumplen al aplicarlos a cualquier experimento de MCUV
+\item[*] Calcular el radio del disco a travez de los datos obtenidos en la practica y compararlo con la medida experimental
+\item[*] Calcular la aceleración angular del disco.
+\item[*] Calcular la aceleración tangencial del disco.
+\end{itemize}
+ 
+\section{Marco Teórico}
+
+El movimiento circular uniformemente variado se describe como el movimiento de un cuerpo con una rapidez constante y una trayectoria circular. Aunque la rapidez del objeto y la magnitud de su velocidad son constantes, en cada instante cambia de dirección. De igual manera, este movimiento se define como aquél cuya trayectoria es una circunferencia. Una vez situado el origen O de los ángulos describimos el movimiento circular mediante las siguientes magnitudes.
+
+\begin{itemize}
+    \item [] \textbf{Posición Angular $\theta$ :} 
+\end{itemize}
+\begin{itemize}
+\item[]En el instante t el objeto se encuentra en el punto P. Su posición angular viene dada por el ángulo $\theta$, que yace entre el punto P, el centro de la circunferencia C y el origen del ángulo O. La posición angular es el cociente entre dos longitudes (s y r; en este caso) y, por tanto, no tiene dimensiones;
+\end{itemize}
+\begin{itemize}
+    \item [] \textbf{Ecuación: Posición Angular} 
+\item[]
+     \begin{equation*}
+       \theta=Tw    
+     \end{equation*}
+    \item [] \begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{movimiento-circular-uniformemente-variado.jpg}
+    \caption*{Figura 1: Esquema del Sistema Respecto a la masa}
+    \end{figure}
+    \item [] \textbf{Ecuación: Velocidad Angular} 
+\item[]
+\begin{equation*}
+     w = {\frac{2}{T}}  
+\end{equation*}
+\end{itemize}
+\begin{itemize}
+    \item [] \textbf{Periodo T:} 
+\end{itemize}
+\begin{itemize}
+    \item [] Se trata del tiempo que tarda el cuerpo en dar una vuelta completa. El cual se mide en segundos (s) según el Sistema Internacional (SI). Su expresión viene dada por el producto de $2\pi$ dividido dentro de la velocidad angular.
+\item[]\textbf{Ecuación: Período}
+\item[]
+\begin{equation*}
+     T = {\frac{2}{w}}
+\end{equation*}
+   \item [] \begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{Captura de pantalla 2023-02-18 191810.png}
+    \caption*{Figura 2: Esquema del Sistema Respecto a la Masa en Función del Tiempo}
+    \end{figure}
+\item[] \begin{equation}
+  z = {\theta_0 +w_0t+\frac{1}{2}*zt^2}
+\end{equation}
+\item[] \begin{equation}
+    wf=w_0+zt
+\end{equation}
+\item[] \begin{equation}
+    w^2f=wo^2+2(0f-0_0)
+\end{equation}
+\item[] \begin{equation}
+    a_t=R_z
+\end{equation}
+\end{itemize}
+\section{Diseño Experimental}
+\begin{itemize}
+\item[] El experimento realizado consistió en hacer girar una rueda de madera del centro de masa con un peso que hiciera girar la rueda a modo de que fuera aumentando su velocidad. Para ello se midió el tiempo que transcurrió por cada vuelta realizada ya que esto varía al momento de ir aumentando el número de vueltas ejercidas por el sistema, también se calculó el radio del centro donde gira el objeto en cuestión.
+
+\end{itemize}
+\subsection{Materiales y equipo}
+\begin{itemize}
+\item[*] Disco con su eje.
+\item[*] 2 metros de hilo de cáñamo
+\item[*] Una cinta métrica
+\item[*] Un crónometro
+\item[*] Un soporte de masa de 10 g con dos masas de 10 g c/u
+\item[*] Un venier
+\item[*] Un trípode en forma de V
+\item[*] Una Varilla de 1 metro
+\item[*] Una mordaza universal
+\end{itemize}
+
+\subsection{Magnitudes físicas a medir}
+\begin{itemize}
+\item[*] La posición angular $\theta$ del disco, en radianes, respecto a un punto de referencia arbitrariamente escogido.
+\item[*] El tiempo t que tarda el disco en realizar una vuelta, dos vueltas, tres vueltas, etc.
+\item[*] l radio R del disco que enrolla el hilo de cáñamo. 
+\item[*] La altura h de la masa que cuelga del hilo de cáñamo. 
+\item[*] Tiempo que tarda la masa que cuelga del hilo en recorrer la altura h.
+\end{itemize}
+
+\subsection{Procedimiento}
+\begin{enumerate}
+\item[*] Se monto el equipo y se envolvió con la cuerda al- rededor del segundo disco más pequeño, colocando la masa de 30g sujeta al hilo de cáñamo (como se muestra en la figura 2).
+\item[*] Se seleccionó una señal de referencia, para medir la posición angular en el disco.
+\item[*] Se dejó caer a partir del reposo y fue observado que tan rápido dio las vueltas el disco.
+\item[*] Fue medido el tiempo 5 veces en cada vuelta.
+\item[*] Se midió una altura arbitraria y se midió el tiempo 5 veces en el que tarda en llegar al suelo.
+\item[*] Se estimo el radio del disco.
+\end{enumerate}
+\begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.1}\\
+    \text{Modelo del Sistema}\\
+    \includegraphics[scale=1.3]{Figura1.1.png}
+    \end{figure}
+ \begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.2}\\
+    \text{Modelo del Sistema en movimiento}\\
+    \includegraphics[scale=0.9]{Figura1.2.png}
+    \end{figure}
+    
+\section{Resultados}
+
+    \begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.3}\\
+  
+ \includegraphics[scale=0.4]{posicion angular vs Tiempo.png}
+    \caption*{Fuente: Elaboración Propia, 2023}
+\end{figure}
+    \negthinspace
+ Con los datos obtenidos se encontró la aceleracion angular
+    \negthinspace
+    \begin{center}
+    $\ \alpha = 1.444 \pm 0.003  \frac{rad}{s} $\\
+    \end{center}
+    
+    \begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.4}\\
+    \text{Gráfica Velocidad vs Tiempo}\\
+\includegraphics[scale=0.4]{Grafica Posicion vs Tiempo2.png}
+    \caption*{Fuente: Elaboración Propia, 2023}
+\end{figure}
+
+\negthinspace
+Con los datos obtenidos se encontró la aceleración tangencial
+\begin{center}
+    $\ a_{tan} = 0.0579 \pm 0.0008  \frac{m}{s^2} $\\
+    \end{center}
+    
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+$R_e_x_p$  (m) & \Delta	$R_e_x_p$ (m) & $R_t_e_o_r_i_c_o$  (m) & \Delta	$R_t_e_o_r_i_c_o$ (m) \\ \hline
+0.0401 & 0.0005 & 0.0375 & 0.0001 \\ \hline
+\end{tabular}
+
+\end{table}
+
+    \begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.5}\\
+    \text{Gráfica Velocidad vs Tiempo}\\
+       \includegraphics[scale=0.35]{diagrama de incertezas.png}
+    \caption*{Fuente: Elaboración Propia, 2023} 
+\end{figure}
+
+\section{Discusión de Resultados}
+En este informe se determinó la magnitud física dela aceleración angular y el radio del disco, en dónde se demostró que la aceleración angular fue constante para este sistema. Se tomaron mediciones de tiempo para calcular la aceleración teórica del sistema, luego se calculó el tiempo promedio de las mediciones por vuelta para acercarse mejor al valor real del tiempo en una revolución y se considero la incerteza de las mediciones de tiempo gracias a los errores aleatorios en el experimento utilizando un software tanto parta analizar el comportamiento y  para graficar las  tablas de datos, agregando el error relativo, de donde se obtiene el coeficiente de la ecuación polinomial de grado 2 que ajusta la curva a los datos de revoluciones vs tiempo, este coeficiente es la aceleración angular del sistema con la desviación correcta en las mediciones, por ultimo este arrastre de error se lleva al modelo teórico de la aceleración angular para calcular su incerteza. A la hora de diseñar la grafica se obtuvo el coeficiente de la ecuacion polinomial de grado 2, que se ajusto a los datos de la curva de posicion vs tiempo, este dato de grados dos, resultando como la aceleracion angular. 
+
+\section{Conclusiones}
+\begin{itemize}
+\item[$\bullet$]  Se calculó el radio experimental  utilizando la ecuación $R=\frac{a}{\alpha}$ y al compararlo con el radio teórico vemos que existe una diferencia de 0.0026, lo cual nos indica que es una pequeña incerteza pero que no afecta nuestros cálculos. 
+\item[$\bullet$] Se determinó la aceleración angular del disco y la incerteza con un valor de 0.003 , utilizando los datos brindados y el software Qtiplot. 
+\item[$\bullet$] Para la obtención de la aceleración tangencial del disco se utilizaron los datos de las graficas, las cuales fueron derivadas de la aceleración, obtuvimos el resultado de 0.00579+0.0008 m/s
+\end{itemize}
+\begin{enumerate}
+
+\end{enumerate}
+\section{Anexos}
+ 
+     \begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{log aceleracion angular.png}
+    \caption*{Figura 1.6 log aceleracion angular}
+    \caption*{Fuente: Elaboración propia 2023}
+    \end{figure}
+    
+     \begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{log aceleracion lineal.png}
+    \caption*{Figura 1.7 log aceleracion lineal}
+    \caption*{Fuente: Elaboración propia 2023}
+    \end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.8}\\
+  
+    \includegraphics[scale=0.14]{capturaTrackermodeloLineal.png}
+    \caption*{Fuente: Datos experimentales }
+     \caption*{Fuente: Elaboración propia 2023}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \textbf{Figura No.1.9}\\
+
+    \includegraphics[scale=0.14]{capturaTrackermodeloRotacional.png}
+    \caption*{Fuente: Datos experimentales }
+    \caption*{Fuente: Elaboración propia 2023}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \textbf{Figura 1.10}\\
+         \text{Radio teórico}\\
+        \includegraphics[scale=0.5]{muestraCalculo.png}
+     \caption*{Fuente: Elaboración propia 2023}
+    \end{figure}
+    
+    \begin{figure}[H]
+    \centering
+    \textbf{Figura 1.11}\\
+    \text{Aceleración Tangencial}\\
+         \includegraphics[scale=0.5]{aTangencial.png}
+         \caption*{Fuente: Elaboración propia 2023}
+    \end{figure}
+    
+    \begin{figure}[H]
+    \centering
+    \textbf{Figura 1.12}\\
+    \text{Diferencia entre el radio Experimental y el Radio Teorico}\\
+         \includegraphics[scale=0.5]{dif.png}
+         \caption*{Fuente: Elaboración propia 2023}
+    \end{figure}
+
+
+\begin{thebibliography}{99}
+%Las fuentes de consulta se citan en forma organizada y homogÃ©nea, tanto de los libros, de los artículos y, en general, de las obras consultadas, que fueron indispensables indicar o referir en el contenido del trabajo.
+
+\bibitem{} Haley, S.(Feb. 1983).The Thévenin Circuit Theorem and Its Generalization to Linear Algebraic Systems. Education, IEEE Transactions on, vol.26, no.1, pp.34-36.
+
+\bibitem{} SERWAY, RAYMOND. A. (Tomo 1, 7ª edi). (Bogotá, 2008).  Física. McGraw-Hill.
+
+\bibitem{}Ohanian, H.Markert, J. (Volumen 1. Tercera edición). (New York-London, 2007).: Física para ingeniería y ciencias. W. W. Norton & Company, Inc. 
+
+\bibitem{} Reckdahl, K. (Versión [3.0.1]). (2006). Using Imported Graphics in LATEX and pdfLATEX.
+\url{https://acortar.link/P5rkRR} \\
+\end{thebibliography}
+
+
+\end{document}
