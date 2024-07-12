@@ -1,0 +1,180 @@
+\documentclass[osajnl,twocolumn,showpacs,superscriptaddress,10pt]{revtex4-1}
+%
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%
+%Paquete de Idioma
+\usepackage[spanish]{babel}
+%
+%CodificaciÃ³n Alfabeto
+\usepackage[utf8]{inputenc}
+%
+%CodificaciÃ³n de Fuente
+\usepackage[T1]{fontenc}
+%
+%Ãndice
+\usepackage{makeidx}
+%
+%GrÃ¡ficos
+\usepackage{graphicx}
+\usepackage{subfig}
+%\usepackage{xcolor} 
+%
+%MatemÃ¡tica
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{amstext} 
+%
+%Estilo de PÃ¡gina NumeraciÃ³n superior
+%\pagestyle{headings}
+%
+%Hiperlinks \href{url}{text}
+\usepackage[pdftex]{hyperref}
+%
+%Graficos y tablas
+\usepackage{multirow}
+%\usepackage{multicol}
+\usepackage{float}
+\usepackage{booktabs}
+%
+\decimalpoint
+%\bibliographystyle{IEEEtran}
+%\bibliography{IEEEabrv,mybibfile}
+%
+%
+\begin{document}
+%Titulo
+\title{Laboratorio 2: Conociendo el uso y cuidado del equipo de laboratorio}
+\thanks{Laboratorios de FÃ­sica}
+
+\author{Nombre, Apellido, carne}\email{e-mail: correo1@dominio1}
+\affiliation{Facultad de IngenierÃ­a, Departamento de FÃ­sica, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, Zona 12, Guatemala.
+}%
+\author{Nombre, Apellido, carne}\email{e-mail: correo2@dominio2}
+\affiliation{Facultad de IngenierÃ­a, Departamento de FÃ­sica, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, Zona 12, Guatemala.
+}%
+\author{Nombre, Apellido, carne}\email{e-mail: correo3@dominio3}
+\affiliation{Facultad de IngenierÃ­a, Departamento de FÃ­sica, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, Zona 12, Guatemala.
+}%
+
+%\collaboration{MUSO Collaboration}%\noaffiliation
+
+%\date{\today}%
+
+%Resumen
+\begin{abstract}
+
+Un buen resumen debe permitir al lector identificar, en forma rÃ¡pida y precisa, el
+contenido bÃ¡sico del trabajo; no debe tener mÃ¡s de 250 palabras y debe redactarse en
+pasado, exceptuando el Ãºltimo pÃ¡rrafo o frase concluyente. No debe aportar informaciÃ³n
+o conclusiÃ³n que no estÃ¡ presente en el texto, asÃ­ como tampoco debe citar referencias
+bibliogrÃ¡ficas. Debe quedar claro el problema que se investiga y el objetivo del mismo.
+
+\end{abstract}
+
+\maketitle{}
+
+\section{Objetivos}
+
+Es necesario indicar de manera el propÃ³sito del trabajo. Definir los objetivos de la
+prÃ¡ctica permite la formulaciÃ³n de una o varias hipÃ³tesis. Los objetivos se pueden
+clasificar en objetivos generales y especÃ­ficos.
+
+\subsection{Generales}
+\begin{itemize}
+\item[$\bullet$] Objetivo general
+\end{itemize}
+\subsection{EspecÃ­ficos}
+\begin{itemize}
+\item[*] Objetivo especÃ­fico 1
+\item[*] Objetivo especÃ­fico 2
+\item[*] etc.
+\end{itemize}
+ 
+\section{Marco TeÃ³rico}
+
+Su contenido debe tener una exposiciÃ³n lÃ³gica y ordenada de los temas, asÃ­ como
+evitar la excesiva extensiÃ³n y el resumen extremo de la presentaciÃ³n de la teorÃ­a. Es
+importante que la teorÃ­a expuesta no sea una "transcripciÃ³n bibliogrÃ¡fica" de temas
+que tengan alguna relaciÃ³n con el problema, sino que fundamente cientÃ­ficamente el
+trabajo.\\
+
+\section{DiseÃ±o Experimental}
+
+Hace una descripciÃ³n del mÃ©todo o tÃ©cnica utilizada para medir y/o calcular las
+magnitudes fÃ­sicas en estudio, y si es del caso, del aparato de mediciÃ³n. Hay que
+recordar que el "mÃ©todo" es el procedimiento o direcciÃ³n que conducirÃ¡ a la soluciÃ³n
+del problema planteado. Se recomienda redactar una breve introducciÃ³n para explicar
+el enfoque metodolÃ³gico seleccionado.\\
+
+\subsection{Materiales}
+\begin{itemize}
+\item[*] Material 1
+\item[*] Material 2
+\item[*] etc.
+
+\end{itemize}
+
+
+\subsection{Magnitudes fÃ­sicas a medir}
+\begin{itemize}
+\item[*] Magnitud fÃ­sica a medir 1
+\item[*] Magnitud fÃ­sica a medir 2
+\item[*] etc.
+\end{itemize}
+
+\subsection{Procedimiento}
+\begin{enumerate}
+\item[*] Procedimiento 1
+\item[*] Procedimiento 2
+\item[*] etc.
+\end{enumerate}
+
+\section{Resultados}
+
+Los resultados se analizan, en general, por medio de grÃ¡ficos o diagramas,
+debidamente identificados, que muestran el comportamiento entre las magnitudes
+medidas o que permiten calcular otras magnitudes. Dependiendo de lo extenso de las
+grÃ¡ficas y/o tablas, Ã©stas se pueden anexar al final del trabajo.\\
+
+Todos los datos obtenidos deben ir acompaÃ±ados de las unidades dimensionales,
+con su debida incertidumbre de medida, que mostrarÃ¡n la calidad, precisiÃ³n y
+reproductibilidad de las mediciones. Ã‰stos deben ser consistentes, a lo largo del
+reporte.\\
+
+
+\section{DiscusiÃ³n de Resultados}
+
+En este apartado se deben analizar los resultados obtenidos, contrastÃ¡ndolos con
+la teorÃ­a expuesta en la secciÃ³n del Marco TeÃ³rico. Corresponde explicar el
+comportamiento de las tablas y grÃ¡ficas expuestas en la secciÃ³n de Resultados,
+tomando en cuenta el anÃ¡lisis estadÃ­stico apropiado.\\
+
+\section{Conclusiones}
+
+Las conclusiones son interpretaciones lÃ³gicas del anÃ¡lisis de resultados, que
+deben ser consistentes con los objetivos presentados previamente.\\
+
+\begin{enumerate}
+\item ConclusiÃ³n 1
+\item ConclusiÃ³n 2
+\item etc.
+\end{enumerate}
+
+\begin{thebibliography}{99}
+%Las fuentes de consulta se citan en forma organizada y homogÃ©nea, tanto de los libros, de los artÃ­culos y, en general, de las obras consultadas, que fueron indispensables indicar o referir en el contenido del trabajo.
+
+\bibitem{} Grossman, S. (Segunda ediciÃ³n). (1987). \textit{Ãlgebra lineal}. MÃ©xico: Grupo Editorial Iberoamericana.
+
+\bibitem{} Reckdahl, K. (VersiÃ³n [3.0.1]). (2006).\textit{ Using Imported Graphics in LATEX and pdfLATEX}.
+
+\bibitem{}Nahvi, M., \& Edminister, J. (Cuarta ediciÃ³n). (2003). \textit{Schaum's outline of Theory and problems of electric circuits}. United States of America: McGraw-Hill.
+
+\bibitem{} Haley, S.(Feb. 1983).\textit{The ThÃ©venin Circuit Theorem and Its Generalization to Linear Algebraic Systems}. Education, IEEE Transactions on, vol.26, no.1, pp.34-36.
+
+\bibitem{}AnÃ³nimo.\textit{ I-V Characteristic Curves} [En linea][25 de octubre de 2012]. Disponible en:\\ \url{http://www.electronics-tutorials.ws/blog/i-v-characteristic-curves.html}
+\end{thebibliography}
+
+
+\end{document}

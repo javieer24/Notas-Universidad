@@ -1,0 +1,409 @@
+\subsection{Cálculos Mediciones Experimentales Incertezas}
+
+\begin{figure}[H]
+    \centering
+    \begin{center}
+    \begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{L=0.400m} \\
+\hline
+Voltaje(V) 1 & $\pm \Delta voltaje$ \\
+\hline
+0.26 & $(0.26X0.012)+(2X10^-3)=0.005$ \\
+\hline
+0.52 & $(0.52X0.012)+(2X10^-3)=0.008$ \\
+\hline
+0.82 & $(0.82X0.012)+(2X10^-3)=0.011$ \\
+\hline
+0.98 &$(0.98X0.012)+(2X10^-3)=0.014$ \\
+\hline
+1.45 & $(1.45X0.012)+(2X10^-3)=0.019$ \\
+\hline
+1.7 & $(1.7X0.012)+(2X10^-3)=0.022$ \\
+\hline
+Corriente(A) & $\pm \Delta corriente$ \\
+\hline
+0.18 & $(0.18X0.012)+(2X10^-4)=0.0038$ \\
+\hline
+0.38 & $(0.38X0.012)+(2X10^-5)=0.0114$ \\
+\hline
+0.62 & $(0.62X0.012)+(2X10^-5)=0.0186$ \\
+\hline
+0.74 & $(0.74X0.012)+(2X10^-5)=0.0220$ \\
+\hline
+1.09 & $(1.09X0.012)+(2X10^-5)=0.0327$ \\
+\hline
+1.29 & $(1.29X0.012)+(2X10^-5)=0.0387$ \\
+\hline
+\end{tabular}
+    \end{center}
+   \end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \begin{center}
+    \begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{L=0.500m} \\
+\hline
+Voltaje(V) 1 & $\pm \Delta voltaje$ \\
+\hline
+0.26 & $(0.26X0.012)+(2X10^-3) = 0.003$ \\
+\hline
+0.51 & $(0.51X0.012)+(2X10^-3) = 0.008$ \\
+\hline
+0.88 & $(0.88X0.012)+(2X10^-3) = 0.011$ \\
+\hline
+0.97 &$(0.97X0.012)+(2X10^-3) = 0.012$ \\
+\hline
+1.44 & $(1.44X0.012)+(2X10^-3) = 0.017$ \\
+\hline
+1.72 & $(1.72X0.012)+(2X10^-3) = 0.021$ \\
+\hline
+Corriente(A) & $\pm \Delta corriente$ \\
+\hline
+0.16 & $(0.16X0.012)+(2X10^-4) = 0.002$ \\
+\hline
+0.33 & $(0.33X0.012)+(2X10^-5) = 0.004$ \\
+\hline
+0.54 & $(0.54X0.012)+(2X10^-5) = 0.006$ \\
+\hline
+0.63 & $(0.63X0.012)+(2X10^-5) = 0.008$ \\
+\hline
+0.95 & $(0.95X0.012)+(2X10^-5) = 0.011$ \\
+\hline
+1.14 & $(1.14X0.012)+(2X10^-5) = 0.014$ \\
+\hline
+\end{tabular}
+    \end{center}
+   \end{figure}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=8cm]{}
+\end{center}
+\end{figure}
+
+
+
+
+\begin{figure}[H]
+    \centering
+    \begin{center}
+    \begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{L=0.600m} \\
+\hline
+Voltaje(V) 1 & $\pm \Delta voltaje$ \\
+\hline
+0.27 & $(0.27X0.012)+(2X10^-3) = 0.006$ \\
+\hline
+0.53 & $(0.53X0.012)+(2X10^-3) = 0.008$ \\
+\hline
+0.81 & $(0.81X0.012)+(2X10^-3) = 0.010$ \\
+\hline
+0.99 &$(0.99X0.012)+(2X10^-3) = 0.012$ \\
+\hline
+1.45 & $(1.45X0.012)+(2X10^-3) = 0.017$ \\
+\hline
+1.71 & $(1.71X0.012)+(2X10^-3) = 0.021$ \\
+\hline
+Corriente(A) & $\pm \Delta corriente$ \\
+\hline
+0.14 & $(0.14X0.012)+(2X10^-4) = 0.002$ \\
+\hline
+0.29 & $(0.29X0.012)+(2X10^-5) = 0.003$ \\
+\hline
+0.45 & $(0.45X0.012)+(2X10^-5) = 0.005$ \\
+\hline
+0.56 & $(0.56X0.012)+(2X10^-5) = 0.007$ \\
+\hline
+0.82 & $(0.82X0.012)+(2X10^-5) = 0.010$ \\
+\hline
+0.98 & $(0.98X0.012)+(2X10^-5) = 0.012$ \\
+\hline
+\end{tabular}
+    \end{center}
+   \end{figure}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=8cm]{}
+\end{center}
+\end{figure}
+
+
+
+\begin{figure}[H]
+    \centering
+    \begin{center}
+    \begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{L=0.700m} \\
+\hline
+Voltaje(V) 1 & $\pm \Delta voltaje$ \\
+\hline
+0.27 & $(0.27X0.012)+(2X10^-4) = 0.003$ \\
+\hline
+0.50 & $(0.50X0.012)+(2X10^-5) = 0.006$ \\
+\hline
+0.83 & $(0.83X0.012)+(2X10^-5) = 0.010$ \\
+\hline
+1.00 & $(1.00X0.012)+(2X10^-5) = 0.012$ \\
+\hline
+1.45 & $(1.45X0.012)+(2X10^-5) = 0.017$ \\
+\hline
+1.73 & $(1.73X0.012)+(2X10^-5) = 0.021$ \\
+\hline
+Corriente(A) & $\pm \Delta corriente$ \\
+\hline
+0.12 & $(0.12X0.012)+(2X10^-3) = 0.002$ \\
+\hline
+0.23 & $(0.23X0.012)+(2X10^-3) = 0.003$ \\
+\hline
+0.39 & $(0.39X0.012)+(2X10^-3) = 0.005$ \\
+\hline
+0.47 &$(0.47X0.012)+(2X10^-3) = 0.006$ \\
+\hline
+0.70 & $(0.70X0.012)+(2X10^-3) = 0.008$ \\
+\hline
+0.83 & $(0.83X0.012)+(2X10^-3) = 0.010$ \\
+\hline
+\end{tabular}
+    \end{center}
+   \end{figure}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=8cm]{}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \begin{center}
+    \begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{L=0.800m} \\
+\hline
+Voltaje(V) 1 & $\pm \Delta voltaje$ \\
+\hline
+0.23 & $(0.23X0.012)+(2X10^-3) = 0.003$ \\
+\hline
+0.51 & $(0.51X0.012)+(2X10^-3) = 0.008$ \\
+\hline
+0.81 & $(0.81X0.012)+(2X10^-3) = 0.010$ \\
+\hline
+0.99 &$(0.99X0.012)+(2X10^-3) = 0.012$ \\
+\hline
+1.45 & $(1.45X0.012)+(2X10^-3) = 0.017$ \\
+\hline
+1.70 & $(1.70X0.012)+(2X10^-3) = 0.020$ \\
+\hline
+Corriente(A) & $\pm \Delta corriente$ \\
+\hline
+0.09 & $(0.09X0.012)+(2X10^-4) = 0.001
+$ \\
+\hline
+0.21 & $(0.21X0.012)+(2X10^-5) = 0.003$ \\
+\hline
+0.34 & $(0.34X0.012)+(2X10^-5) = 0.004$ \\
+\hline
+0.42 & $(0.42X0.012)+(2X10^-5) = 0.005$ \\
+\hline
+0.60 & $(0.60X0.012)+(2X10^-5) = 0.007$ \\
+\hline
+0.73 & $(0.73X0.012)+(2X10^-5) = 0.009$ \\
+\hline
+\end{tabular}
+    \end{center}
+   \end{figure}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=8cm]{}
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{center}
+    \begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{L=0.900m} \\
+\hline
+Voltaje(V) 1 & $\pm \Delta voltaje$ \\
+\hline
+0.24 & $(0.24 x 0.012) + (2 x 10^-3) = 0.00503$ \\
+\hline
+0.51 & $(0.51 x 0.012) + (2 x 10^-3) = 0.00812$ \\
+\hline
+0.80 & $(0.80 x 0.012) + (2 x 10^-3) = 0.0116$ \\
+\hline
+1 &$(1 x 0.012) + (2 x 10^-3) = 0.014$ \\
+\hline
+1.46 & $(1.46 x 0.012) + (2 x 10^-3) = 0.018$ \\
+\hline
+1.69 & $(1.69 x 0.012) + (2 x 10^-3) = 0.020$ \\
+\hline
+Corriente(A) & $\pm \Delta corriente$ \\
+\hline
+0.08 & $(0.08 x 0.012) + (2 x 10^-4) = 0.00114$ \\
+\hline
+0.19 & $(0.19 x 0.012) + (2 x 10^-5) = 0.00228$ \\
+\hline
+0.30 & $(0.30 x 0.012) + (2 x 10^-5) = 0.00360$ \\
+\hline
+0.38 & $(0.38 x 0.012) + (2 x 10^-5) = 0.00456$ \\
+\hline
+0.57 & $(0.57 x 0.012) + (2 x 10^-5) = 0.00684$ \\
+\hline
+0.66 & $(0.66 x 0.012) + (2 x 10^-5) = 0.00792$ \\
+
+\hline
+\end{tabular}
+    \end{center}
+   \end{figure}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=8cm]{}
+\end{center}
+\end{figure}
+
+
+
+\begin{figure}[H]
+    \centering
+    \begin{center}
+    \begin{tabular}{|c|c|}
+\hline
+\multicolumn{2}{|c|}{L=1.000m} \\
+\hline
+Voltaje(V) 1 & $\pm \Delta voltaje$ \\
+\hline
+0.24 & $(0.24X0.012)+(2X10^-3) = 0.003$ \\
+\hline
+0.49 & $(0.49X0.012)+(2X10^-3) = 0.006$ \\
+\hline
+0.81 & $(0.81X0.012)+(2X10^-3) = 0.010$ \\
+\hline
+1.02 &$(1.02X0.012)+(2X10^-3) = 0.012$ \\
+\hline
+1.43 & $(1.43X0.012)+(2X10^-3) = 0.017$ \\
+\hline
+1.72 & $(1.72X0.012)+(2X10^-3) = 0.021$ \\
+\hline
+Corriente(A) & $\pm \Delta corriente$ \\
+\hline
+0.08 & $(0.08X0.012)+(2X10^-4) = 0.001$ \\
+\hline
+0.17 & $(0.17X0.012)+(2X10^-4) = 0.002$ \\
+\hline
+0.28 & $(0.28X0.012)+(2X10^-5) = 0.003
+$ \\
+\hline
+0.36 & $(0.36X0.012)+(2X10^-5) = 0.004$ \\
+\hline
+0.51 & $(0.51X0.012)+(2X10^-5) = 0.006$ \\
+\hline
+0.62 & $(0.62X0.012)+(2X10^-5) = 0.007$ \\
+\hline
+\end{tabular}
+    \end{center}
+   \end{figure}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=8cm]{}
+\end{center}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=8cm]{}
+\end{center}
+\end{figure}
+
+En el cálculo de incerteza para un voltaje, depende de las especificaciones del manual del multímetro utilizado y la escala de medición.
+En este caso tomando como ejemplo para una medición efectuada en la escala de 20mV está dado por:
+
+\begin{itemize*}
+    \item $\Delta V = V(1.2\%) \pm 2D$
+    \item  En donde
+    \item $\Delta V$: Incerteza de la medición.
+    \item V: Medición tomada.
+    \item D: Valor de la resolución dada la escala de medición.
+    \item \textbf{En base a lo anterior se hicieron los respectivos calculos sustituyendo con cada valor solicitado.}
+\end{itemize*}
+
+
+\begin{itemize*}
+   \item[]  El cálculo de incerteza para una corriente, depende de las especificaciones del manual del multímetro utilizado y la escala de medición.
+\end{itemize*}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=8cm]{}
+\end{center}
+\end{figure}
+En este caso tomando como ejemplo para una medición efectuada en la escala de 200 mA está dado por: 
+
+\begin{itemize*}
+    \item $\Delta I = I(2.0\%) \pm 2D$
+    \item  En donde
+    \item $\Delta I$: Incerteza de la medición.
+    \item I: Medición tomada.
+    \item D: Valor de la resolución dada la escala de medición.
+\end{itemize*}
+
+\begin{itemize*}
+    \item[] \textbf{En base a lo anterior se hicieron los respectivos calculos sustituyendo con cada valor solicitado.}
+\end{itemize*}
+
+El área transversal del cable conductor es el área de un círculo, por lo tanto la ecuación es la siguiente:
+
+\begin{equation*}
+    \Pi* r^{2}=Area
+\end{equation*}
+Sustituimos valores y queda de este modo
+\begin{equation*}
+    \Pi*(0.00025){^2}=1.9635*10^{-7}
+\end{equation*}
+
+Para el Cálculo de resistividad experimental suando el coeficiente de ajusto se usó la siguiente fórmula:
+\begin{equation*}
+    \rho= m*A=Resistividad
+\end{equation*}
+
+\begin{center}
+\textbf{Se uso la siguiente formula para el calculo de:}
+Calculo de $p $ y $ \Delta p$
+\begin{equation*}
+    \rho =m*A
+\end{equation*}
+\begin{equation*}
+    \rho = m*\pi*r^{2}
+\end{equation*}
+\end{center}
+

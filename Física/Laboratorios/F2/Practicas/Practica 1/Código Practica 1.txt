@@ -1,0 +1,768 @@
+\documentclass[osajnl,twocolumn,showpacs,superscriptaddress,10pt]{revtex4-1}
+%
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+%
+%Paquete de Idioma
+\usepackage[spanish]{babel}
+%
+%CodificaciÃ³n Alfabeto
+\usepackage[utf8]{inputenc}
+%
+%CodificaciÃ³n de Fuente
+\usepackage[T1]{fontenc}
+%
+%Ãndice
+\usepackage{makeidx}
+%
+%GrÃ¡ficos
+\usepackage{graphicx}
+\usepackage{subfig}
+%\usepackage{xcolor} 
+%
+%MatemÃ¡tica
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{amstext} 
+%
+%Estilo de PÃ¡gina NumeraciÃ³n superior
+%\pagestyle{headings}
+%
+%Hiperlinks \href{url}{text}
+\usepackage[pdftex]{hyperref}
+%
+%Graficos y tablas
+\usepackage{multirow}
+%\usepackage{multicol}
+\usepackage{float}
+\usepackage{booktabs}
+%
+\decimalpoint
+%\bibliographystyle{IEEEtran}
+%\bibliography{IEEEabrv,mybibfile}
+%
+%
+\begin{document}
+%Titulo
+\title{Laboratorio 1: Conociendo el uso y cuidado del equipo de laboratorio}
+\thanks{Laboratorios de Física}
+
+\author{Giovanni Alexander, Castro Morales, 201900481}\email{e-mail: 3005626910101@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, Zona 12, Guatemala.
+}%
+
+\author{Mario Ernesto, Marroquín Pérez, 202110509}\email{e-mail: 2815806340401@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, Zona 12, Guatemala.
+}%
+
+\author{Joab Israel, Ajsivinac Ajsivinac, 202200135}\email{e-mail: 3114791110409@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, 
+}%
+
+\author{Alejandra Magalí, López Miranda, 201600085}\email{e-mail: 2816733570108@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, Zona 12, Guatemala.
+}%
+
+\author{Javier Andrés, Monjes Solórzano, 202100081}\email{e-mail: 3020696740101@ingenieria.usac.edu.gt}
+\affiliation{Facultad de Ingeniería, Departamento de Física, Universidad de San Carlos, Edificio T1, Ciudad Universitaria, Zona 12, Guatemala.
+}%
+%\collaboration{MUSO Collaboration}%\noaffiliation
+
+%\date{\today}%
+
+%Resumen
+\begin{abstract}
+
+La práctica 1 del laboratorio de física 2 consistió en comprender el uso y el cuidado del equipo de laboratorio. Para hacer esto, usamos un simulador para crear un circuito electrónico que nos permitió hacer mediciones a diferentes resistencias usando un multímetro. Estos valores se compararon con los valores teóricos, y dado que ambas mediciones fueron muy precisas, se concluye que la práctica se realizó de manera correcta con el simulador óptimo para obtener los resultados esperados.
+
+\end{abstract}
+
+\maketitle{}
+
+\section{Objetivos}
+\subsection{Generales}
+\begin{itemize}
+\item[$\bullet$] Comprender el uso y manejo del equipo de labora- torio
+\end{itemize}
+\subsection{Específicos}
+\begin{itemize}
+\item[*] Obtener el valor de resistencia de una serie de resistencias diferentes con un multímetro.
+\item[*] Calcular el valor teórico de cada resistencia utilizando adecuadamente el código de colores.
+\item[*] Comparar los resultados experimentales obtenidos con el multímetro con los teóricos de las resistencias según el código de colores.
+\end{itemize}
+ 
+\section{Marco Teórico}
+\subsection{Conceptos Básicos}
+\subsubsection{Diferencia de Potencial}
+Suponga que un punto A esta conectado a un punto B por medio de un material conductor, generalmente un alambre, si el punto A posee un potencial VA y el punto B posee un potencial VB, se producirá un campo eléctrico entre ambos puntos, por lo que se producirá un movimiento de cargas eléctricas desde un punto hacia el otro, por lo que se podría definir que la diferencia de potencial es el trabajo por unidad de carga ejercido por el campo eléctrico sobre una partícula cargada para moverla entre dos posiciones determinadas, es decir:
+
+\begin{equation}
+\Delta V = V_{B} - V_{A} = \frac{W_{AB}}{q}
+\end{equation}\\
+
+por lo que es evidente que la corriente eléctrica es
+un flujo de carga eléctrica por unidad de tiempo que
+recorre un material, es decir:
+
+\begin{equation}
+    i = \frac{dq}{dt}
+\end{equation}\\
+
+
+
+Esta corriente siempre viaja desde el polo negativo al positivo de la fuente suministradora de FEM, que es la fuerza electromotriz. Existen dos tipos de
+corriente: la continua y la alterna.
+
+
+\subsubsection{Corriente Alterna (AC)}
+
+Se denomina corriente alterna (Alternating Current) a la corriente eléctrica en la que la magnitud y dirección varían cíclicamente. La forma de onda de la corriente alterna más comúnmente utilizada es la de una onda sinusoidal. Es un tipo de corriente eléctrica, en la que la dirección del flujo de electrones va y viene a intervalos regulares o en ciclos. La corriente que fluye por las líneas eléctricas y la electricidad disponible normalmente en las casas procedente de los enchufes de la pared es corriente alterna.
+
+\begin{figure}[H]
+\includegraphics[width=8cm]{AC.jpg}
+\end{figure}
+\begin{center}
+Figura 1: Gráfica de como varia la corriente respecto del tiempo para la corriente alterna.   
+\end{center} \\
+
+El voltaje varía entre los valores máximo y mínimo de manera cíclica. El voltaje es positivo la mitad del tiempo y negativo la otra mitad. Esto significa que la mitad del tiempo la corriente circula en un sentido y, la otra mitad en sentido opuesto.
+
+La corriente alterna fue descubierta por el físico, ingeniero, e inventor serbio Nikola Tesla en 1882, fecha en la que diseñó y construyó el primer motor en emplearla para su funcionamiento.
+
+\subsubsection{Corriente Continua (DC)}
+
+Se denomina corriente directa (Direct Current) al
+flujo de cargas eléctricas que no cambia de sentido
+con el tiempo. La corriente eléctrica a través de un
+material se establece entre dos puntos de distinto potencial. Cuando hay corriente continua, los terminales de mayor y menor potencial no se intercambian entre
+sí. Es errónea la identificación de la corriente continua
+con la corriente constante (ninguna lo es, ni siquiera
+la suministrada por una batería).
+
+\begin{figure}[H]
+\includegraphics[width=8cm]{DC.jpg}
+\end{figure}
+\begin{center}
+Figura 2: Gráfica de como varia la corriente respecto
+del tiempo para la corriente directa.   
+\end{center} \\
+
+\subsection{Uso y cuidado de los instrumentos de laboratorio}
+
+\subsubsection{ Fuente de Alimentación}
+Esta fuente brinda dos tipos de voltaje (tensión o diferencia de potencial).
+
+\begin{itemize}
+\item[*] Voltaje directo DC que se puede variar de 0 a 15
+volts cuya salida se simboliza por las terminales
+rojo (+) y negro (-); viene dos indicadores para
+medir voltaje y corriente en ampere solo en DC
+con un rango de 0 a 5 A (Ampere), cuando se
+enciende el aparato el voltaje no empieza desde cero sino que aproximadamente a los 3 volt.
+(Criterio del fabricante).
+
+\item[*] Voltaje alterno AC no variable (o fijo) con un
+valor eficaz de 35 volts la salida se simboliza
+por las terminales de color verde.
+
+\begin{figure}[H]
+\includegraphics[width=8cm]{im3.png}
+\end{figure}
+\begin{center}
+Figura 3: Fuente de alimentación 33032.   
+\end{center} \\
+
+\textbf{Cuidado de la fuente}: según indicaciones del
+fabricante, el máximo de corriente permisible es
+de 5 A, para evitar que se dañe el aparato debe
+seguir las siguientes recomendaciones:
+
+\item[*] NO juntar las terminales roja y negro, ni las
+verdes por medio de un alambre conductor.
+\item[*] No sobrepasar la corriente máxima, para ello se
+recomienda que la resistencia de entrada de un
+circuito en DC sea mayor de 5 Ohm
+\end{itemize}
+
+\subsubsection{Multímetro}
+
+El multímetro es el aparato más común de los
+instrumentos de medición eléctrica. Este instrumento agrupa en un solo aparato un voltímetro para medir diferencial de potencial (o voltaje) DCV (voltaje
+en DC) y ACV (Voltaje en AC); un amperímetro para
+medir la corriente en DCA, un Ohmímetro para medir
+resistencias Ω, también posee un zócalo para chequear
+diodos y prueba de ganancia de transistores h_{FE}.
+
+\begin{figure}[H]
+\includegraphics[width=8cm]{im4.png}
+\end{figure}
+\begin{center}
+Figura 4: Multímetro usado para realizar mediciones
+electrónicas.
+\end{center} \\
+
+\begin{enumerate}
+    \item  Perilla selectora de funciones y rangos y encendido.
+    \item  Pantalla
+    \item  Conexión de la polaridad negativa (o tierra) de la punta de medición.
+    \item  Conexión de la polaridad positiva de la punta de
+medición para medir Voltaje, Corriente y Resistencia (excepto para las medidas de 0 a 10 A)
+    \item  Conexión de la polaridad positiva de la punta
+de medición para medir entre 0 y 10 amperios.
+\end{enumerate}
+
+\subsubsection{Cálculo de Incertezas del Multímetro}
+
+Hay que recordar que hay varios tipos de errores
+y dependiendo de la naturaleza de los mismos así es
+el método que se utiliza, los errores sistemáticos son debidos a defectos en los aparatos de medida o al método de trabajo. Normalmente actúan en el mismo sentido, no son aleatorios, siguiendo unas leyes físicas determinadas, de tal forma que en ocasiones se podrán
+calcular y compensar matemáticamente tras la medida. Un ejemplo es la medida de la corriente eléctrica
+que circula por un conductor mediante un amperímetro. Al introducir el amperímetro en el circuito éste
+se modifica, de manera que la corriente medida no es
+exactamente igual a la corriente que circulaba antes
+de colocar el amperímetro. En este ejemplo el propio
+aparato de medida modifica el resultado.
+
+Lo primero es consultar el manual del aparato, debido a que los errores sistemáticos varían dependiendo
+del fabricante y el modelo del mismo, el manual de los
+multímetros utilizados en el laboratorio poseen unas
+tablas similares a las siguientes:
+
+\subsubsection{Voltaje DC}
+\begin{figure}[H]
+\includegraphics[width=8cm]{tablaDC.png}
+\end{figure}
+\begin{center}
+Figura 5: Tabla voltajes.
+\end{center} \\
+
+\subsubsection{Corriente DC}
+\begin{figure}[H]
+\includegraphics[width=8cm]{tablaCDC.png}
+\end{figure} 
+\begin{center}
+Figura 6: Tabla Corrientes.
+\end{center} \\
+
+\subsubsection{Resistencia}
+\begin{figure}[H]
+\includegraphics[width=8cm]{tablaR.png}
+\end{figure}
+\begin{center}
+Figura 7: Tabla Resistencias.
+\end{center} \\
+
+Por ejemplo, si usted realizo una medición de 3.23
+V en la escala de 20V tal como se muestra en la Fig.
+1.5, la incerteza se calcula mediante lo que dice la tabla de voltaje en dc, la cual dice que en la escala de
+20V la resolución o los dígitos es de 10mV y la precisión o la incerteza es de ± 1.2\% of rdg (reading) ± 2D (Dígitos), por lo tanto la incerteza de esta medida es:
+
+\begin{center}
+    3.23V × 1.2 \% + 2(10mV)
+\end{center}
+\begin{center}
+    0.03876V + 0.020V = 0.05876V
+\end{center}
+redondeando el error a una cifra significativa queda
+\begin{center}
+0.06V
+\end{center}
+por lo que la medida sería
+\begin{center}
+(3.23 ± 0.06)V
+\end{center}
+de la misma forma se interpreta la información brindada en las tablas para la medición de la corriente en
+DC y las Resistencias.
+
+
+\subsubsection{Voltímetro}
+Un voltímetro es un instrumento que sirve para
+medir la diferencia de potencial entre dos puntos de
+un circuito eléctrico. Para efectuar la medida de la diferencia de potencial el voltímetro ha de colocarse en
+paralelo; esto se debe a que al colocarse en paralelo la
+diferencia de potencial que experimenta el voltímetro
+es la misma que experimenta el dispositivo al que se
+le desea medir la diferencia de potencial.
+
+\textbf{Como medir voltaje en DC:}
+\begin{itemize}
+    \item [*] Coloque la perilla selectora en la función de voltaje DCV, en el rango adecuado. como la fuente de alimentación provee unos 15 V DC el rango adecuado será de 0 a 20 V.
+    \item [*] Coloque las puntas de prueba en el multímetro (roja en + y negra en -)
+    \item [*] Las medidas de tensión DC se obtienen conectando las puntas de prueba directamente a los extremos o bornes del dispositivo, se dice que este tipo de conexión es en paralelo con el circuito o componente.
+    \item [*] Proceda a leer en la escala adecuada, conforme al rango escogido
+\end{itemize}
+
+\begin{figure}[H]
+\includegraphics[width=8cm]{im5.png}
+\end{figure}
+\begin{center}
+Figura 8: Medición del voltaje en una resistencia,
+recuerde que el voltaje se mide en paralelo.
+\end{center} \\
+
+\begin{figure}[H]
+\includegraphics[width=8cm]{im6.png}
+\end{figure}
+\begin{center}
+Figura 9: Diagrama sobre como debe medirse el voltaje.
+\end{center} \\
+
+
+\textbf{Cuidado del Voltímetro:}
+\begin{itemize}
+    \item [*] No debe conectar el voltímetro en serie en el
+circuito.
+    \item [*] En el momento de tomar la medida, asegúrese
+que la perilla indicadora del multímetro, este en
+la posición para medir voltaje en DC.
+    \item [*] Asegúrese que la perilla indicadora esté colocada en el rango apropiado de la tensión que se
+desea medir.
+    \item [*] Si la tensión a medir se desconoce, se recomienda comenzar con el rango más alto (1000 V), de no ser apreciable la lectura, disminuya el rango, hasta obtener una lectura apropiada a ser medida.
+    \item [*] Siempre que la pantalla marque un signo negativo indica que la polaridad de sus puntas de
+conexión están en sentido contrario al usual, intercambie las puntas de conexión en el circuito
+o componente.
+\end{itemize}
+
+\subsubsection{Ohmímetro}
+Un ohmímetro es un instrumento que sirve para medir la resistencia que posee un dispositivo en un circuito eléctrico. Para efectuar la medida de la resistencia es importante que no este circulando ninguna corriente por el circuito. \\
+
+\textbf{Como medir resistencias eléctricas:}
+
+\begin{enumerate}
+    \item Que la perilla selectora en la función de Ohmio ( Ω ), elija cierto rango multiplicativo.
+    \item prueba al multímetro (roja en + y negra en -)
+    \item ome la resistencia a ser medida y una las puntas de prueba a cada extremo de la resistencia y lea el valor proporcionado en la pantalla, este es el valor representativo de la resistencia.
+    \item El valor proporcionado debe multiplicarse por el rango que señale la perilla selectora si así es el caso. Por ejemplo si el rango es de 200 o 2000 la medida es el valor mostrado en la pantalla, pero si está en 20k la medida en la pantalla hay que multiplicarla por 1000 ya que el prefijo k significa 1000
+\end{enumerate}
+
+\begin{figure}[H]
+\includegraphics[width=8cm]{im7.png}
+\end{figure}
+\begin{center}
+Figura 10: Diagrama sobre como debe la resistencia.
+\end{center} \\
+
+\subsubsection{Amperímetro}
+Un amperímetro es un instrumento que sirve para medir la corriente que pasa atravez del circuito en un punto dado, para efectuar la medida de la corriente el amperimetro se debe colocar en serie en el punto donde se desea medir la corriente, esto se debe a que al colocarse en serie la corriente que pasa por el amperímetro es la misma que pasa por ese punto del circuito.\\
+
+
+\textbf{Como medir corriente en DC:}
+\begin{itemize}
+
+    \item [*] Coloque la perilla selectora en la función de corriente en DCA en 200 mA si al medir da un
+número menor que 20 pase la escala de 20 mA.
+
+    \item [*] Para la medida de una corriente, se debe conectar, el multímetro en serie con el circuito o
+componente, para esto se debe abrir el circuito
+en el sitio de interés
+
+    \item [*] Proceda a leer en la escala adecuada, conforme
+al rango escogido.
+
+\end{itemize}
+
+\begin{figure}[H]
+\includegraphics[width=8cm]{im8.png}
+\end{figure}
+\begin{center}
+Figura 11: Medición de la corriente en una resistencia, recuerde que la corriente se mide en serie.
+\end{center} \\
+
+\begin{figure}[H]
+\includegraphics[width=8cm]{im9.png}
+\end{figure}
+\begin{center}
+Figura 12: El diagrama muestra como debe medirse la corriente
+\end{center} \\
+
+
+\textbf{Cuidado del Amperímetro:}
+\begin{itemize}
+
+    \item [*] No debe conectar el amperímetro en paralelo en
+el circuito.
+
+    \item [*] En el momento de tomar la medida, asegúrese que la perilla indicadora del multímetro, este en la posición para medir corriente DCA en mA.
+
+    \item [*] Si la corriente a medir se desconoce, se recomienda comenzar con el rango más alto (200), de no ser apreciable la lectura, disminuya el rango, hasta obtener una lectura apropiada a ser medida. Si por descuido la corriente a medir excedió al máximo, es muy probable que tendrá que cambiar el fusible a su aparato.
+
+\end{itemize}
+
+\subsubsection{Protoboard}
+Es un tablero con orificios conectados eléctrica
+mente entre sí, habitualmente siguiendo patrones de
+líneas, en el cual se pueden insertar componentes electrónicos y cables para el armado de circuitos electrónicos. Está hecho de dos materiales, un aislante, generalmente un plástico, y un conductor que conecta los diversos orificios entre sí.
+
+\begin{figure}[H]
+\includegraphics[width=8cm]{im10.png}
+\end{figure}
+\begin{center}
+Figura 13: Protoboard visto desde la parte posterior para entender su funcionamiento
+\end{center} \\
+
+En la fig.10 se muestra el arreglo que hay entre los agujeros y las láminas conductoras internas.
+Como se puede observar en la parte superior existen
+dos conexiones paralelas horizontales las cuales están
+destinadas para su utilización con la fuente de alimentación, es decir el voltaje que hará funcionar el
+circuito, cualquier de los agujeros sobre toda la línea
+horizontal superior esta al potencial positivo y abajo
+al potencial negativo o tierra. En la parte inferior se
+localizan láminas verticales todos los agujeros sobre
+la vertical están unidos a la misma lamina conductora, o sea que es el mismo punto o la misma unión
+o nodo; pero son independientes de las otras láminas
+verticales, la unión entre estas laminas verticales se
+puede lograr con el mismo dispositivo a conectar o
+por medio de alambres llamados puente.\\
+
+
+\textbf{Cuidado del Protoboard:}
+\begin{itemize}
+
+    \item [*] NO derramar ningún tipo de líquido sobre los
+agujeros.
+
+    \item [*] Evitar los cortos circuitos: es decir no puentear
+la polaridad + y - en la misma línea horizontal,
+o colocar las puntas de una resistencia u otro
+dispositivo sobre la misma línea vertical y luego
+colocar la fuente.
+
+    \item [*] No introducir objetos o dispositivos que excedan
+el diámetro de los agujeros.
+
+    \item [*] Mantenerla limpia y seca, limpiándola con una
+brocha o un removedor de polvo por medio de aire comprimido.
+
+\end{itemize}
+
+
+\subsubsection{Resistencia}
+El flujo de carga a través de cualquier material
+encuentra una fuerza opuesta que es similar en muchos aspectos a la fricción mecánica. A esta oposición,
+debida a las colisiones entre electrones y otros átomos
+en el material, que convierten la energía eléctrica en
+otra forma de energía como el calor, se le llama resistencia del material.
+La resistencia eléctrica se puede relacionar mediante la ley de ohm
+
+\begin{center}
+    \begin{equation}
+        V = IR
+    \end{equation}
+\end{center}\\
+
+donde V es el voltaje al que es sometida la resistencia el cual se mide en volt (V), I es la corriente que
+pasa por la resistencia la cual se mide en Amperes
+(A) y R es la magnitud de la resistencia la cual se
+mide en Ohm (Ω).
+
+Dicho de otra forma la resistencia es un dispositivo electrónico pasivo el cual se opone al paso de la corriente, cuya magnitud se puede determinar mediante un ohmímetro o mediante el código de colores, el cual consiste en una serie de bandas de colores que envuelven a la resistencia, hay dos códigos de colores para los resistores de carbón. El de 4 bandas y el de
+5 o 6 bandas.
+
+Para leer el código de colores de un resistor, ésta
+se debe tomar en la mano y colocar de la siguiente forma: la línea o banda de color que está más cerca del
+borde se coloca a la izquierda, quedando generalmente
+a la derecha una banda de color dorado o plateado.
+Cuando leemos el código de colores de 4 bandas se
+debe leer de la siguiente forma:
+
+\begin{itemize}
+
+    \item [*] La primera banda representa la primera cifra.
+
+    \item [*]La segunda banda representa la segunda cifra.
+
+    \item [*] La tercera banda representa el número de ceros
+que siguen a los dos primeros números. (Si la
+tercera banda es negra no hay ceros en el número, si esta banda es dorada se divide por 10 y si esta banda es plateada se divide por 100).
+
+    \item [*] La cuarta banda representa la tolerancia. Esta es usualmente dorada que representa un 5 \%, plateada que es del 10 \%, café o marrón indica el 1 \%, el rojo indica un 2 \% y si no tiene banda es del 20 \%.
+
+En el caso del código de las cinco bandas se lee de la siguiente forma:
+
+    \item [*]La primera banda representa la primera cifra.
+    \item [*]La segunda banda representa la segunda cifra.
+    \item [*]La tercera banda representa la tercera cifra.
+    \item [*]La cuarta banda representa el número de ceros
+que siguen a los tres primeros números. (Si la cuarta banda es negra no hay ceros en el número, si esta banda es dorada se divide por 10 y si esta banda es plateada se divide por 100).
+    \item [*]La quinta banda representa la tolerancia. El café o marrón indica el 1\%, el rojo indica un 2\% y si es verde tiene una tolerancia del 0.5\%.    
+    \item [*]En los resistores de 6 bandas, la ultima banda especifica el coeficiente térmico expresado en ppm/oC (partes por millón por cada grado Centígrado). Este valor determina la estabilidad resistiva a determinada temperatura.
+\end{itemize}
+
+\begin{figure}[H]
+\includegraphics[width=8.3cm]{colores.jpg}
+\end{figure}
+\begin{center}
+Figura 14: Codigo de colores utilizado para determinar de una forma rapida la magnitud de la resistencia.
+\end{center} \\
+
+\subsubsection{Cables de conexión}
+Los cables de conexión completan el circuito de un sistema eléctrico, se suelen utilizar para conectar el protoboard a la fuente.
+\begin{figure}[H]
+\includegraphics[width=8cm]{im12.png}
+\end{figure}
+\begin{center}
+Figura 15: Cables de conexión banana-banana, banana-lagarto y lagarto-lagarto.
+\end{center} \\
+
+
+
+\section{Diseño Experimental}
+
+Mediante la plataforma de Tinkercad (https://www.tinkercad.com/circuits), se llevaron a cabo simulaciones de diversos circuitos que incluían una resistencia y un multímetro. Utilizando el código de colores de la resistencia y la tabla de incertezas del multímetro, se realizó el cálculo para obtener una medición más precisa y exacta.\\
+
+\subsection{Materiales}
+\begin{itemize}
+\item[*] Tinkercad
+\item[*] Protoboard
+\item[*] Multímetro
+\item[*] 6 resistencias de diversos valores.
+\end{itemize}
+
+
+\subsection{Magnitudes físicas a medir}
+\begin{itemize}
+\item[*] Incerteza de la medición de cada resistencia.
+\item[*] Resistencia.
+\end{itemize}
+
+\subsection{Procedimiento}
+\begin{enumerate}
+\item[*] Se colocaron las puntas de prueba al multímetro (roja en + y negra en -)
+\item[*] Se colocó la perilla selectora del multímetro en la función de Ohmio
+(\Omega).
+
+\item[*] Se colocó la resistencia a medir en la protoboard.
+
+\item[*] Se colocaron las puntas de prueba a cada extremo de la resistencia (una punta en cada extremo) y se realizó la lectura del valor de la resistencia. 
+
+\item[*] El valor obtenido por el multímetro se multiplicó por el rango que se indicó la perilla selectora. Por ejemplo; si el rango es de 200 o 2000 la medida es el valor mostrado en la pantalla, pero si está en 20k la medida en pantalla se multiplicar por mil (1000), debido que la letra "k" significa mil (1000).
+
+\item[*] Se simuló un circuito por medio del software Tinkercad en donde se agregaron las 6 resistencias en un protobord y se tomaron las respectivas mediciones.
+
+\end{enumerate}
+
+\section{Resultados}
+\begin{figure}[H]
+    \centering
+    \textbf{Tabla No.1}\\
+    \text{Tabla Teórica}\\
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+R & Teórica $ \Omega$ & Código de Colores  \\
+\hline
+R1 & $330\pm20$ & Naranja-Naranja-Café-Dorado   \\
+\hline
+R2 &  $15000\pm800$ &  Café — Verde — Naranja — Dorado \\
+\hline
+R3 & $1000\pm50$ & Café — Negro — Rojo — Dorado  \\
+\hline
+R4 &  $51000\pm3000$ & Verde — Café — Naran'a — Dorado  \\
+\hline
+R5 &  $27\pm1$ &  Rojo — Morado — Negro — Dorado \\
+\hline
+R6 &  $100\pm 5$ &  Café — Negro — Negro — Negro — Café \\
+\hline
+\end{tabular}
+ \caption*{Fuente: Elaboración propia, 2023 }
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \textbf{Tabla No.2}\\
+    \text{Tabla Experimental}\\
+    
+    
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+R & Experimental $ \Omega$ & Código de Colores  \\
+\hline
+R1 & $330\pm6$ & Naranja-Naranja-Café-Dorado   \\
+\hline
+R2 &  $15000\pm 200$ &  Café — Verde — Naranja — Dorado \\
+\hline
+R3 & $1000\pm14$ & Café — Negro — Rojo — Dorado  \\
+\hline
+R4 &  $51000\pm800$ & Verde — Café — Naran'a — Dorado  \\
+\hline
+R5 &  $27\pm0.5$ &  Rojo — Morado — Negro — Dorado \\
+\hline
+R6 &  $100\pm1.4$ &  Café — Negro — Negro — Negro — Café \\
+\hline
+\end{tabular}
+ \caption*{Fuente: Elaboración propia, 2023 }
+\end{center}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \textbf{Figura No.16}\\
+    \text{Diagrama de incertezas R1 teórica vs. R1 experimental}\\
+    \includegraphics[scale=0.50]{DiagramaR1.jpg}
+    \caption*{Fuente: Elaboración propia, 2023.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \textbf{Figura No.17}\\
+    \text{Diagrama de incertezas R2 teórica vs. R2 experimental}\\
+    \includegraphics[scale=0.50]{DiagramaR2.jpg}
+    \caption*{Fuente: Elaboración propia, 2023.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \textbf{Figura No.18}\\
+    \text{Diagrama de incertezas R3 teórica vs. R3 experimental}\\
+    \includegraphics[scale=0.50]{DiagramaR3.jpg}
+    \caption*{Fuente: Elaboración propia, 2023.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \textbf{Figura No.19}\\
+    \text{Diagrama de incertezas R4 teórica vs. R4 experimental}\\
+    \includegraphics[scale=0.50]{DiagramaR4.jpg}
+    \caption*{Fuente: Elaboración propia, 2023.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \textbf{Figura No.20}\\
+    \text{Diagrama de incertezas R5 teórica vs. R5 experimental}\\
+    \includegraphics[scale=0.50]{DiagramaR5.jpg}
+    \caption*{Fuente: Elaboración propia, 2023.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \textbf{Figura No.21}\\
+    \text{Diagrama de incertezas R6 teórica vs. R6 experimental}\\
+    \includegraphics[scale=0.50]{DiagramaR6.jpg}
+    \caption*{Fuente: Elaboración propia, 2023.}
+\end{figure}
+
+\section{Discusión de Resultados}
+
+Las resistencias o también llamadas resistores forman parte fundamental de un circuito y una de las caracteristicas que poseen es alterar o modificar el paso de la corriente.Se pudo apreciar que los valores teóricos con los experimentales variaron en las seis resistencias usadas para la práctica. Por ende es posible deducir que las incertezas fueron más precisas que que los valores teóricos, ésto debido a que dichas mediciones de resistencia se realizaron de manera experimenta pero con el uso un software gratuito (Tinkercad Circuits), por ende el error humano no se pudo apreciar de la manera que se hubiera hecho dentro del laboratorio. Por lo tanto, es posible afirmar que el error experimental fue muy bajo y se ve reflejado en los resultados obtenidos (especificamente en los diagramas de incerteza realizados). Algo bastante importante de mencionar es que se logró apreciar que entre mayor era la resistencia (cantidad de ohms) la incerteza era cada vez más notable esto tanto para el valor teórico como para el valor experimental.
+
+\section{Conclusiones}
+\begin{enumerate}
+\item El multímetro es muy eficaz, el dato experimental es muy cercano al teórico.
+
+\item El dato obtenido de cada código de color distinto
+fue exacto y la incerteza del mismo contuvo al dato
+experimental. Se demostró que haciendo un uso correcto del ohmímetro se logra realizar la medición de un valor cercano al valor teórico de las resistencias.
+
+\item El uso y correcto cuidado del equipo equivale a re- sultados eficientes. Se observó en las gráficas de incerteza que las resistencias medidas en la práctica son certeras con
+respecto de su valor teórico.
+
+\end{enumerate}
+
+\section{Anexos}
+
+\begin{figure}[H]
+    \centering
+    \textbf{Figura No.22}\\
+    \text{Cálculo de resistencias teóricas Parte 1}\\
+    \includegraphics[scale=0.5]{ResistenciaT2.png}
+    \caption*{Fuente: Elaboración propia, Wolfram 2023 }
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \textbf{Figura No.23}\\
+    \text{Cálculo de resistencias teóricas Parte 2}\\
+    \includegraphics[scale=0.45]{ResistenciaT1.png}
+    \caption*{Fuente: Elaboración propia, Wolfram 2023 }
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \textbf{Figura No.24}\\
+    \text{Cálculo de resistencias (Multímetro) Parte 1}\\
+    \includegraphics[scale=0.45]{ResistenciaM1.png}
+    \caption*{Fuente: Elaboración propia, Wolfram 2023 }
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \textbf{Figura No.25}\\
+    \text{Cálculo de resistencias (Multímetro) Parte 2}\\
+    \includegraphics[scale=0.5]{ResistenciaM2.png}
+    \caption*{Fuente: Elaboración propia, Wolfram 2023 }
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \textbf{Figura No.26}\\
+    \text{Simulación Resistencia 1}\\
+    \includegraphics[scale=0.5]{R1.png}
+    \caption*{Fuente: Elaboración propia, 2023 }
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \textbf{Figura No.27}\\
+    \text{Simulación Resistencia 2}\\
+    \includegraphics[scale=0.5]{R2.png}
+    \caption*{Fuente: Elaboración propia, 2023 }
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \textbf{Figura No.28}\\
+    \text{Simulación Resistencia 3}\\
+    \includegraphics[scale=0.5]{r3.png}
+    \caption*{Fuente: Elaboración propia, 2023 }
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \textbf{Figura No.29}\\
+    \text{Simulación Resistencia 4}\\
+    \includegraphics[scale=0.5]{R4.png}
+    \caption*{Fuente: Elaboración propia, 2023 }
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \textbf{Figura No.30}\\
+    \text{Simulación Resistencia 5}\\
+    \includegraphics[scale=0.5]{r5.png}
+    \caption*{Fuente: Elaboración propia, 2023 }
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \textbf{Figura No.31}\\
+    \text{Simulación Resistencia 6}\\
+    \includegraphics[scale=0.5]{r6.png}
+    \caption*{Fuente: Elaboración propia, 2023 }
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \textbf{Figura No.32}\\
+    \text{Sesión grupo de trabajo}\\
+    \includegraphics[scale=0.2]{sesion.jpg}
+    \caption*{Fuente: Elaboración propia, 2023 }
+\end{figure}
+
+\begin{thebibliography}{99}
+%Las fuentes de consulta se citan en forma organizada y homogÃ©nea, tanto de los libros, de los artÃ­culos y, en general, de las obras consultadas, que fueron indispensables indicar o referir en el contenido del trabajo.
+
+\bibitem{} Departamento de Física. \textit{MANUAL DEL LABORATORIO DE FÍSICA DOS}. Guatemala: Facultad de Ingeniería.USAC.Conociendo el uso y cuidado del equipo de laboratorio.
+
+\bibitem{} Reckdahl, K. (VersiÃ³n [3.0.1]). (2006).\textit{ Using Imported Graphics in LATEX and pdfLATEX}.
+
+\bibitem{}Nahvi, M., \& Edminister, J. (Cuarta ediciÃ³n). (2003). \textit{Schaum's outline of Theory and problems of electric circuits}. United States of America: McGraw-Hill.
+
+\bibitem{} Haley, S.(Feb. 1983).\textit{The ThÃ©venin Circuit Theorem and Its Generalization to Linear Algebraic Systems}. Education, IEEE Transactions on, vol.26, no.1, pp.34-36.
+
+
+\end{document}
