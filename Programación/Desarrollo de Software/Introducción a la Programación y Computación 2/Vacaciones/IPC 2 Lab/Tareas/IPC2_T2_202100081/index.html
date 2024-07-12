@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ficha Médica del Paciente</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">  </head>
+<body>
+
+<div class="container mt-5">
+  <form id="medicalRecordForm" action="submit.php" method="post">
+
+    <h1>Identificación del Centro</h1>
+    <div class="form-group">
+      <label for="centerID">Identificación del centro:</label>
+      <input type="text" class="form-control" width="100px" id="centerID" name="centerID" required>
+    </div>
+
+    <h2>Datos del Paciente</h2>
+    <div class="form-group">
+      <label for="patientID">N° de identificación:</label>
+      <input type="number" class="form-control" width="100px" id="patientID" name="patientID" required>
+    </div>
+    <div class="container">
+        <h1>Formulario de ficha médica</h1>
+        <form action="submit.php" method="post">
+          <div class="row">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="sexo">Sexo</label>
+                <select class="form-control" width="100px" id="sexo" name="sexo">
+                  <option value="Femenino">Femenino</option>
+                  <option value="Masculino">Masculino</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="fecha_ingreso">Fecha de ingreso a la base de datos</label>
+                <input type="date" class="form-control" width="100px" id="fecha_ingreso" name="fecha_ingreso" required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="raza">Raza</label>
+                <select class="form-control" width="100px" id="raza" name="raza">
+                  <option value="Desconocida">Desconocida</option>
+                  <option value="Blanca">Blanca</option>
+                  <option value="Negra">Negra</option>
+                  <option value="Mestiza">Mestiza</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="procedencia">Procedencia</label>
+                <select class="form-control" width="100px" id="procedencia" name="procedencia">
+                  <option value="Urbana">Urbana</option>
+                  <option value="Rural">Rural</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="fecha_nacimiento">Fecha de nacimiento</label>
+                <input type="date" class="form-control" width="100px" id="fecha_nacimiento" name="fecha_nacimiento" required>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="estatura">Estatura</label>
+                <input type="number" class="form-control" width="100px" id="estatura" name="estatura" min="100" max="250" step="0.1" required>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="peso">Peso</label>
+                <input type="number" class="form-control" width="100px" id="peso" name="peso" min="20" max="200" step="1" required>
+              </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                  <label for="imc">IMC</label>
+                  <input type="number" class="form-control" width="100px" id="imc" name="imc" readonly>
+                </div>
+              </div>
+            </div>
+            </div>
+            
+    </div>
+    <div class="container">
+        <h1>Antecedentes</h1>
+        <form action="submit.php" method="post">
+            <div class="row">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="firstdate">Fecha primera consulta</label>
+                  <input type="date" class="form-control" width="100px" id="firstdate" name="firstdate" required>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="consulta">Meses de demora por consulta</label>
+                  <select class="form-control" width="100px" id="consulta" name="consulta">
+                    <option value="De 1 mes a 3 meses">De 1 mes a 3 meses</option>
+                    <option value="De 4 meses a 6 meses">De 4 meses a 6 meses</option>
+                    <option value="De 7 meses a 9 meses">De 7 meses a 9 meses</option>
+                    <option value="De 10 meses a 1 año">De 10 meses a 1 año</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="anterior">Mamografía durante el año anterior al diagnostico</label>
+                  <select class="form-control" width="100px" id="anterior" name="anterior">
+                    <option value="Ninguna">Ninguna</option>
+                    <option value="No">No</option>
+                    <option value="Si">Sí</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="biopsias">Biopsias mamarias previas</label>
+                  <select class="form-control" width="100px" id="biopsias" name="biopsias">
+                    <option value="Ninguna">Ninguna</option>
+                    <option value="Una">Una</option>
+                    <option value="Mas de una">Mas de una</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="hiperlasia">¿Alguna fue hiperlasia atípica?</label>
+                  <select class="form-control" width="100px" id="hiperlasia" name="hiperlasia">
+                    <option value="No aplica">No aplica</option>
+                    <option value="No">No</option>
+                    <option value="Si">Sí</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="previous">¿Cáncer de mama previo?</label>
+                  <select class="form-control" width="100px" id="previous" name="previous">
+                    <option value="Ninguna">Ninguna</option>
+                    <option value="No">No</option>
+                    <option value="CDIS">CDIS</option>
+                    <option value="CLIS">CLIS</option>
+                    <option value="Ductal Infiltrante">Ductal Infiltrante</option>
+                    <option value="Lobular Infiltrante">Lobular Infiltrante</option>
+                    <option value="Otros">Otros</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="anterior">Lado del Tumor Anterior</label>
+                  <select class="form-control" width="100px" id="anterior" name="anterior">
+                    <option value="No corresponde">No corresponde</option>
+                    <option value="Ipsilateral">Ipsilateral</option>
+                    <option value="Contralateral">Contralateral</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="cancerbody">¿Ha tenido cáncer en algún otro lado del cuerpo?</label>
+                  <select class="form-control" width="100px" id="cancerbody" name="cancerbody">
+                    <option value="No corresponde">No corresponde</option>
+                    <option value="No">No</option>
+                    <option value="Cuello uterino">Cuello uterino</option>
+                    <option value="Ovario">Ovario</option>
+                    <option value="Endometrio">Endometrio</option>
+                    <option value="Colon">Colon</option>
+                    <option value="Otros">Otros</option>
+                  </select>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="parientes">Cuantos parientes en primer grado con Cáncer de Mama</label>
+                  <select class="form-control" width="100px" id="parientes" name=parientes">
+                      <option value="Ninguna">Ninguno</option>
+                      <option value="Uno">Uno</option>
+                      <option value="Dos">Dos</option>
+                      <option value="Mas de uno">Mas de uno</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="camama">Otros parientes con cáncer de mama</label>
+                  <select class="form-control" width="100px" id="camama" name="camama">
+                    <option value="Ninguna">Ninguno</option>
+                    <option value="Uno">Uno</option>
+                    <option value="Dos">Dos</option>
+                    <option value="Mas de uno">Mas de uno</option>
+                  </select>
+                </div>
+              </div>
+              </div>
+              </div>
+          </div>
+      </div>
+
+
+
+
+    </div>
+            
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <script>
+        // Calcular el IMC automáticamente cuando se cambien los valores de peso o estatura
+        const pesoInput = document.getElementById("peso");
+        const estaturaInput = document.getElementById("estatura");
+        const imcInput = document.getElementById("imc");
+      
+        function calcularIMC() {
+          const peso = parseFloat(pesoInput.value);
+          const estatura = parseFloat(estaturaInput.value) / 100; // Convertir estatura a metros
+      
+          if (!isNaN(peso) && !isNaN(estatura)) {
+            const imc = peso / (estatura * estatura);
+            imcInput.value = imc.toFixed(2); // Mostrar el IMC con 2 decimales
+          } else {
+            imcInput.value = ""; // Vaciar el campo de IMC si los valores no son numéricos
+          }
+        }
+      
+        pesoInput.addEventListener("change", calcularIMC);
+        estaturaInput.addEventListener("change", calcularIMC);
+      </script>
+      
+  </form>
+</div>
+
+</body>
+</html>

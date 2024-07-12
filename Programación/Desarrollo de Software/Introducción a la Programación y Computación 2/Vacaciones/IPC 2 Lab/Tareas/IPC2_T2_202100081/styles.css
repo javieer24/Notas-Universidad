@@ -1,0 +1,25 @@
+/* Estilos para los campos del formulario */
+
+.form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .form-control {
+    width: 100%;
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+    padding: 0.5rem 1rem;
+  }
+  
+  .form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  /* Estilos para los mensajes de error */
+  
+  .invalid-feedback {
+    color: #dc3545;
+    font-size: 0.8rem;
+  }
+  
