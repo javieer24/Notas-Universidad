@@ -1,0 +1,464 @@
+## Usuario
+que es releases? en github
+## Bing
+Los lanzamientos (releases) en GitHub son una forma de empaquetar y poner a disposición del público el software, junto con notas de lanzamiento y enlaces a archivos binarios, para que otros puedan usarlos. Los lanzamientos se basan en etiquetas de Git, que marcan un punto específico en el historial del repositorio. Cualquier persona que tenga acceso de lectura a un repositorio puede ver y comparar los lanzamientos, pero solo aquellos con permisos de escritura pueden administrarlos. Puedes crear notas de lanzamiento manualmente mientras administras un lanzamiento o generarlas automáticamente a partir de una plantilla predeterminada o personalizar tu propia plantilla de notas de lanzamiento. ¿Te gustaría saber más sobre cómo crear un lanzamiento en GitHub? 😊.
+## Usuario
+dame un link para saber como mejorar o personalizar mi github
+## Bing
+Claro, aquí tienes un enlace a la documentación de GitHub sobre cómo personalizar tu repositorio. En este enlace encontrarás información sobre cómo agregar un archivo README, generar una licencia para tu repositorio, agregar un botón de patrocinador, personalizar la vista previa de las redes sociales de tu repositorio, clasificar tu repositorio con temas, definir propietarios de código y mucho más. ¿Hay algo en particular que te gustaría personalizar en tu repositorio? 😊
+## Usuario
+¿qué puede hacer el nuevo chat de bing?
+## Bing
+Bing Chat es una función impulsada por IA que se encuentra en Microsoft Edge. Con Bing Chat, puedes hacer preguntas y obtener respuestas completas al lado de tu pantalla. Algunas de las cosas que puedes hacer con Bing Chat incluyen:
+- Realizar búsquedas y obtener respuestas en relación con la página que estás viendo.
+- Comparar productos directamente en tu barra lateral y crear una tabla para ayudarte a comparar.
+- Obtener información resumida de documentos, incluidos PDF, documentos de Word y contenido de sitios web más largos.
+Para acceder a Bing Chat en la barra lateral de Microsoft Edge, simplemente haz clic en el icono de Bing en la parte superior derecha de la barra de herramientas de Edge. Asegúrate de haber iniciado sesión con tu cuenta Microsoft para comenzar. Además, pronto podrás acceder a Bing Chat directamente desde el menú de la aplicación Microsoft Edge, lo que facilitará llevar tu chat contigo, hacer preguntas sobre el contenido web y encontrar exactamente lo que estás buscando mientras viajas. ¿Te gustaría saber más sobre cómo usar Bing Chat? 😊
+## Usuario
+Una arrendadora de automóviles necesita llevar un registro de los vehículos disponibles
+para alquiler y realizar el seguimiento de los clientes y sus respectivas reservaciones. Para
+lograrlo, se le pide desarrollar un programa en Java que utilice vectores o matrices de 2
+dimensiones para gestionar esta información, se espera que el sistema permita realizar las
+siguientes acciones:
+- Menú inicial que permita al administrador ingresar el inventario de vehículos a través
+de la aplicación iniciando sesión con un nombre y una contraseña.
+- Agregar nuevos vehículos al sistema.
+- Registrar clientes.
+- Permitirle al cliente iniciar sesión y cerrar la misma.
+- Realizar ventas.
+- Aplicar descuentos especiales según la cantidad de días que se arrende un
+vehículo.
+- Emitir factura.
+- Realizar dos reportes de los vehículos siendo estos los más rentados según marca o
+modelo.
+Menú inicial
+El sistema deberá mostrar un menú inicial, donde se podrá ingresar a funcionalidades de
+administrador o cliente, de querer ingresar a las funcionalidades del administrador se
+solicitará su nombre y su contraseña (este ya debe existir por defecto), se verificará que sus
+credenciales sean las correctas, de lo contrario de ingresar como cliente, únicamente se le
+pedirá su NIT, el cual se verificará que ya se encuentre registrado en el sistema.
+- Ingresar como Administrador
+a. Agregar nuevos vehículos al inventario.
+b. Agregar descuentos especiales según la cantidad de días que se arrende un
+vehículo.
+c. Realizar reportes.
+d. Cerrar Sesión (Regresar al menú principal)
+- Ingresar como cliente
+a. Registrarse.
+b. Iniciar sesión.
+c. Realizar reservas.
+d. Cerrar sesión (Regresar al menú principal)
+Las credenciales del usuario administrador serán las siguientes:
+● Usuario: admin_<número de carnet>
+● Contraseña: <número de carnet>
+Si el usuario o la contraseña son incorrectos deberá mostrar un mensaje de error y solicitar
+nuevamente el nombre del usuario y la contraseña.
+Menú administrador
+El administrador podrá entrar al siguiente menú solo si se ingresan las credenciales que se
+explicaron anteriormente.
++++ Administrador +++
+1.Agregar vehiculo
+2. Agregar descuento
+3. Realizar reportes
+4.Mostrar usuarios
+5. Regresal a1 menu principal
+Agregar nuevos vehículos al sistema
+Al entrar a esta opción el sistema solicitará los siguientes datos:
+- Marca
+- Línea
+- Modelo
+- Placa
+- Costo por día de alquiler (en quetzales)
+Ejemplo:
+Toyota
+Corolla
+2018
+P654JSD
+135
+Restricciones
+● Se deberá verificar que la placa del vehículo ingresado no exista en el sistema.
+● Se deberá verificar que el costo por día de alquiler ingresado sea mayor a 0.
+● El administrador puede modificar los datos del vehículo excepto el número de placa.
+● El administrador puede eliminar vehículos del sistema siempre y cuando no estén
+arrendados.
+Agregar descuentos especiales
+En esta sección el sistema ingresará la cantidad de días necesarios para que se aplique el
+porcentaje de descuento (el porcentaje solo acepta números enteros). Se solicitarán los
+siguientes datos:
+- Número de días mínimo de alquiler.
+- Porcentaje de descuento.
+Ejemplo:
+10
+35%
+Restricciones:
+● Se debe de verificar que el número de días sea mayor a 0
+● Se debe de verificar que el porcentaje de descuento sea mayor a 0 y menor a 100.
+● En caso el número de días de alquiler sea mayor que el mínimo de días de más de
+un descuento, únicamente se aplicará el descuento con mayor número de días
+mínimo.
+Mostrar Usuarios
+En esta sección se mostrarán todos los usuarios registrados en el sistema:
+- NIT
+- Nombre
+- Apellido
+Ejemplo:
+NIT Nombre Apellido
+● 123456789 Juan Lopez
+● 987564573 Otto Morales
+Menu cliente
+Registrarse
+El cliente tendrá opción a registrarse, para este registro se requieren de 3 campos:
+● Nombre
+● Apellido
+● NIT
+Restricciones:
+● No pueden haber dos usuarios con el mismo NIT.
+Iniciar Sesión
+El cliente podrá iniciar sesión utilizando solamente su NIT, por lo mismo solo se requiere un
+campo al momento de entrar a es
+## Bing
+Parece que
+## Usuario
+Observaciones:
+● Si no existe ningún usuario con el NIT ingresado se deberá mostrar un
+mensaje notificando de este error.
+Cerrar Sesión
+Esta opción tendrá la única funcionalidad de cerrar la sesión actual para que un nuevo
+usuario pueda iniciar sesión.
+Realizar Orden de Renta de vehiculos
+Al ingresar a esta opción, el sistema deberá mostrar:
+● Listado de vehículos disponibles
+● Descuentos segun dias de arrendamiento
+● Opción para mostrar la lista de vehículos rentados en la orden actual.
+● Opción de reserva de un vehículo para la orden actual
+● Opción de finalización de renta
++++ Vehiculos disponibles +++
+Toyota corolla Q145 P231ASD
+Honda  civic Q136   P452FGT
++++ Descuentos aplicados segun dias de arrendamiento +++
+5 dias de descuento
+8 dias 12% de descuento	
+En la reserva de un vehículo para la orden actual deberá solicitar el identificador único del
+vehículo y el número de días a rentar, así como un mensaje de éxito o fracaso en caso de
+no existir el código ingresado.
+Al finalizar la orden de renta de vehículos se mostrará un factura en caso de existir más de
+un vehículo reservado, ésta deberá incluir los siguientes datos:
+● Nombre de la empresa (ByteCar)
+● Nombre del cliente
+● Número de NIT
+● Fecha del día y hora de la emisión de la factura
+● Listado de vehículos rentados
+○ Modelo
+○ Línea
+○ Placa
+○ Días rentados
+○ Costo total por los días rentados
+● Subtotal
+● Porcentaje de descuento (si aplica)
+● Total (con el descuento si aplica)
+Reportes
+Se deberá generar un reporte mostrando las marcas con más días rentados en orden
+descendente.
+Se deberá generar un reporte mostrando los modelos con más días rentados en orden
+descendente.
++++ Reporte 1: segun marca +++
+Marca Total de dias rentado
+Mazda	23
+Toyota	15	
+Honda	1
+---
+49
++++ Reporte 2: segun modelo+++
+Modelo Total de dias rentado
+2019	30
+2021	19
+---
+49
+Restricciones
+● El programa se realizará utilizando únicamente el lenguaje Java.
+● La aplicación deberá ser realizada en consola (no hacer uso de interfaz gráfica)
+● No se permite el uso de librerías arraylist, linkedlist, etc. para el manejo de los
+arrays.
+● Toda la información debe almacenarse en arreglos o matrices.
+● Se debe de hacer uso de condicionales, funciones, arreglos y ciclos de forma
+obligatoria.
+## Bing
+Parece que
+## Usuario
+Con lo que te envie crea un código de guía y con comentarios y tambien con un manual tecnica y explica aparte del manual como funciona todo el código y que todo se encuentre únicamente en java y en main
+## Bing
+Aquí tienes un código de guía en Java para el programa que mencionaste. Este código incluye comentarios para ayudarte a entender cómo funciona. También te proporcionaré un manual técnico que explica cómo funciona el código en detalle.
+
+import java.util.Scanner;
+
+public class Main {
+    // Constantes para el tamaño de los arreglos
+    private static final int MAX_VEHICULOS = 100;
+    private static final int MAX_CLIENTES = 100;
+    private static final int MAX_RENTAS = 100;
+
+    // Arreglos para almacenar la información de vehículos, clientes y rentas
+    private static String[] marcas = new String[MAX_VEHICULOS];
+    private static String[] lineas = new String[MAX_VEHICULOS];
+    private static int[] modelos = new int[MAX_VEHICULOS];
+    private static String[] placas = new String[MAX_VEHICULOS];
+    private static double[] costosPorDia = new double[MAX_VEHICULOS];
+    private static boolean[] disponibles = new boolean[MAX_VEHICULOS];
+
+    private static String[] nombres = new String[MAX_CLIENTES];
+    private static String[] apellidos = new String[MAX_CLIENTES];
+    private static String[] nits = new String[MAX_CLIENTES];
+
+    private static int[] rentaVehiculoId = new int[MAX_RENTAS];
+    private static int[] rentaClienteId = new int[MAX_RENTAS];
+    private static int[] rentaDias = new int[MAX_RENTAS];
+
+    // Variables para llevar la cuenta de cuántos vehículos, clientes y rentas hay en el sistema
+    private static int numVehiculos = 0;
+    private static int numClientes = 0;
+    private static int numRentas = 0;
+
+    // Variables para los descuentos
+    private static int descuentoDiasMinimos = 0;
+    private static double descuentoPorcentaje = 0;
+
+    // Objeto Scanner para leer la entrada del usuario
+    private static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        // Mostrar el menú principal
+        menuPrincipal();
+    }
+
+    /**
+     * Muestra el menú principal y permite al usuario elegir una opción.
+     */
+    public static void menuPrincipal() {
+        while (true) {
+            System.out.println("Menú Principal");
+            System.out.println("1. Ingresar como Administrador");
+            System.out.println("2. Ingresar como Cliente");
+            System.out.println("3. Salir");
+            System.out.print("Ingrese una opción: ");
+            int opcion = scanner.nextInt();
+            scanner.nextLine(); // Limpiar el buffer
+
+            switch (opcion) {
+                case 1:
+                    menuAdministrador();
+                    break;
+                case 2:
+                    menuCliente();
+                    break;
+                case 3:
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Opción inválida.");
+                    break;
+            }
+        }
+    }
+
+    /**
+     * Muestra el menú del administrador y permite al usuario elegir una opción.
+     */
+    public static void menuAdministrador() {
+        while (true) {
+            System.out.println("Menú Administrador");
+            System.out.println("1. Agregar Vehículo");
+            System.out.println("2. Agregar Descuento");
+            System.out.println("3. Realizar Reportes");
+            System.out.println("4. Mostrar Usuarios");
+            System.out.println("5. Regresar al Menú Principal");
+            System.out.print("Ingrese una opción: ");
+            int opcion = scanner.nextInt();
+            scanner.nextLine(); // Limpiar el buffer
+
+            switch (opcion) {
+                case 1:
+                    agregarVehiculo();
+                    break;
+                case 2:
+                    agregarDescuento();
+                    break;
+                case 3:
+                    realizarReportes();
+                    break;
+                case 4:
+                    mostrarUsuarios();
+                    break;
+                case 5:
+                    return;
+                default:
+                    System.out.println("Opción inválida.");
+                    break;
+            }
+        }
+    }
+
+    /**
+     * Permite al administrador agregar un nuevo vehículo al sistema.
+     */
+    public static void agregarVehiculo() {
+        if (numVehiculos >= MAX_VEHICULOS) {
+            System.out.println("No se pueden agregar más vehículos.");
+            return;
+        }
+
+        System.out.print("Ingrese la marca: ");
+        String marca = scanner.nextLine();
+        System.out.print("Ingrese la línea: ");
+        String linea = scanner.nextLine();
+        System.out.print("Ingrese el modelo: ");
+        int modelo = scanner.nextInt();
+        scanner.nextLine(); // Limpiar el buffer
+        System.out.print("Ingrese la placa: ");
+        String placa = scanner.nextLine();
+        System.out.print("Ingrese el costo por día: ");
+        double costoPorDia = scanner.nextDouble();
+        scanner.nextLine(); // Limpiar el buffer
+
+        // Verificar que la placa no exista en el sistema
+        for (int i = 0; i < numVehiculos; i++) {
+            if (placas[i].equals(placa)) {
+                System.out.println("Ya existe un vehículo con esa placa.");
+                return;
+            }
+        }
+
+        // Verificar que el costo por día sea mayor a 0
+        if (costoPorDia <= 0) {
+            System.out.println("El costo por día debe ser mayor a 0.");
+            return;
+        }
+
+        // Agregar el vehículo al sistema
+        marcas[numVehiculos] = marca;
+        lineas[numVehiculos] = linea;
+        modelos[numVehiculos] = modelo;
+        placas[numVehiculos] = placa;
+        costosPorDia[numVehiculos] = costoPorDia;
+        disponibles[numVehiculos] = true;
+        numVehiculos++;
+
+        System.out.println("Vehículo agregado exitosamente.");
+    }
+
+    /**
+     * Permite al administrador agregar un descuento al sistema.
+     */
+    public static void agregarDescuento() {
+        System.out.print("Ingrese el número de días mínimo: ");
+        int diasMinimos = scanner.nextInt();
+        scanner.nextLine(); // Limpiar el buffer
+        System.out.print("Ingrese el porcentaje de descuento: ");
+        double porcentaje = scanner.nextDouble();
+        scanner.nextLine(); // Limpiar el buffer
+
+        // Verificar que el número de días sea mayor a 0
+        if (diasMinimos <= 0) {
+            System.out.println("El número de días debe ser mayor a 0.");
+            return;
+        }
+
+        // Verificar que el porcentaje de descuento sea mayor a 0 y menor a 100
+        if (porcentaje <= 0 || porcentaje >= 100) {
+            System.out.println("El porcentaje de descuento debe ser mayor a 0 y menor a 100.");
+            return;
+        }
+
+        // Agregar el descuento al sistema
+        descuentoDiasMinimos = diasMinimos;
+        descuentoPorcentaje = porcentaje;
+
+        System.out.println("Descuento agregado exitosamente.");
+    }
+
+    /**
+     * Permite al administrador realizar reportes.
+     */
+    public static void realizarReportes() {
+        while (true) {
+            System.out.println("Realizar Reportes");
+            System.out.println("1. Reporte según Marca");
+            System.out.println("2. Reporte según Modelo");
+            System.out.println("3. Regresar al Menú Administrador");
+            System.out.print("Ingrese una opción: ");
+            int opcion = scanner.nextInt();
+            scanner.nextLine(); // Limpiar el buffer
+
+            switch (opcion) {
+                case 1:
+                    reporteSegunMarca();
+                    break;
+                case 2:
+                    reporteSegunModelo();
+                    break;
+                case 3:
+                    return;
+                default:
+                    System.out.println("Opción inválida.");
+                    break;
+            }
+        }
+    }
+
+    /**
+     * Genera un reporte mostrando las marcas con más días rentados en orden descendente.
+     */
+    public static void reporteSegunMarca() {
+        // Crear un arreglo para almacenar la cantidad de días rentados por marca
+        int[] diasRentadosPorMarca = new int[numVehiculos];
+
+        // Calcular la cantidad de días rentados por marca
+        for (int i = 0; i < numRentas; i++) {
+            int vehiculoId = rentaVehiculoId[i];
+            int dias = rentaDias[i];
+            diasRentadosPorMarca[vehiculoId] += dias;
+        }
+
+        // Ordenar las marcas por la cantidad de días rentados en orden descendente
+        for (int i = 0; i < numVehiculos - 1; i++) {
+            for (int j = i + 1; j < numVehiculos; j++) {
+                if (diasRentadosPorMarca[i] < diasRentadosPorMarca[j]) {
+                    // Intercambiar las marcas
+                    String tempMarca = marcas[i];
+                    marcas[i] = marcas[j];
+                    marcas[j] = tempMarca;
+
+                    // Intercambiar los días rentados
+                    int tempDiasRentados = diasRentadosPorMarca[i];
+                    diasRentadosPorMarca[i] = diasRentadosPorMarca[j];
+                    diasRentadosPorMarca[j] = tempDiasRentados;
+                }
+            }
+        }
+
+        // Mostrar el reporte
+        System.out.println("Reporte según Marca");
+        System.out.println("Marca\tTotal de Días Rentado");
+        for
+
+
+## Usuario
+
+haz un manual explicando el código
+
+
+## Bing
+
+Aquí tienes un manual que explica cómo funciona el código que te proporcioné anteriormente:
+
+Este programa está diseñado para llevar un registro de vehículos disponibles para alquiler y realizar el seguimiento de los clientes y sus respectivas reservaciones. El programa está escrito en Java y utiliza vectores o matrices de 2 dimensiones para gestionar la información.
+
+El programa comienza mostrando un menú principal que permite al usuario ingresar como administrador o como cliente. Si el usuario elige ingresar como administrador, se le pedirá que inicie sesión con un nombre y una contraseña. Una vez que el administrador ha iniciado sesión, puede acceder a varias funcionalidades, como agregar nuevos vehículos al sistema, registrar clientes, realizar ventas, aplicar descuentos especiales según la cantidad de días que se arrende un vehículo, emitir facturas y realizar dos reportes de los vehículos siendo estos los más rentados según marca o modelo.
+
+Si el usuario elige ingresar como cliente, se le pedirá su NIT, el cual se verificará que ya se encuentre registrado en el sistema. Una vez que el cliente ha iniciado sesión, puede realizar reservas y cerrar sesión.
+
+El programa utiliza varios arreglos para almacenar la información de vehículos, clientes y rentas. También utiliza variables para llevar la cuenta de cuántos vehículos, clientes y rentas hay en el sistema y para almacenar información sobre los descuentos.
+
+El código incluye varios métodos para realizar diferentes acciones, como agregar un nuevo vehículo al sistema, agregar un descuento, realizar reportes, mostrar usuarios, registrar a un cliente, iniciar sesión como cliente, realizar una orden de renta de vehículos y generar facturas.
+
+Espero que este manual te haya ayudado a entender cómo funciona el código. Si tienes alguna pregunta adicional o necesitas más información, no dudes en hacerme saber. 😊
+
