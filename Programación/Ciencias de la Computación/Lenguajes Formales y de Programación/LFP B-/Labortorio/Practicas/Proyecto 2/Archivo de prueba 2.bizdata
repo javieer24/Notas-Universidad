@@ -1,0 +1,22 @@
+Claves = [ 
+		"codigo",
+		"producto",
+		"precio_compra",
+		"precio_venta",
+		"stock"
+	  ]
+
+Registros = [ 
+		{1,"Barbacoa",10.50,20,6}
+		{2,"Salsa",13.00,16.00,7}
+		{3,"Mayonesa",15.0,18.00,8}
+ 	    ]
+
+conteo();
+promedio("stock");
+contarsi("stock",6);
+datos();
+sumar("stock");
+min("precio_venta");
+
+exportarReporte("Reporte HTML de abarroteria");
