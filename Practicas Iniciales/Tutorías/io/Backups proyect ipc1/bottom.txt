@@ -1,0 +1,36 @@
+private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        // TODO add your handling code here:
+        int n1 = Integer.parseInt(jTextField1.getText());
+        int n2 = Integer.parseInt(jTextField1.getText());
+        int n3 = Integer.parseInt(jTextField1.getText());
+        int n4 = Integer.parseInt(jTextField1.getText());  
+        
+        DefaultPieDataset datos = new DefaultPieDataset();
+        datos.setValue("VideoJuegos",n1);
+        datos.setValue("Deportes",n2);
+        datos.setValue("Internet",n3);
+        datos.setValue("Libros",n4);
+        
+        JFreeChart grafico_circular = ChartFactory.createPieChart(
+        "Pasatiempos favoritos de las Personas", //nombre del gráfico
+        datos,            //datos
+        true,            //leyenda
+        true,           //herramientas
+        false           //generación de URL
+        );
+
+        ChartPanel panel = new ChartPanel(grafico_circular);
+        panel.setMouseWheelEnabled(true);
+        panel.setPreferredSize(new Dimension(400,200));
+        
+        
+        jPanel1.setLayout(new BorderLayout());
+        jPanel1.add(panel,BorderLayout.NORTH);
+        
+        pack();
+        repaint();
+        
+        
+        
+        
+    }                    

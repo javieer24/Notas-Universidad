@@ -1,0 +1,93 @@
+Pasos Para Grafica
+Se crea nuevo proyecto ejemplo= GraficoCircular
+dentro del proyecto se crea un JFrame= Circular
+
+Decir "vamos a iniciar a crear la interfaz para poder empezar a programar, pero antes necesitamos las librerias correspondientes esto lo podemos descargar en el siguiente link por si no lo tienen configurado
+sourceforge.net/projects/jfreechart/
+bien ahora como agregamos esta libreria, para esto nos dirigimos a librerias, Libraries
+seleccionamos AddJarFolder
+ahora Buscamos la carpeta de la libreria de JFreechart, seleccionamos y buscamos la carpeta lb, y para esto seleccionamos los archivos dentro de esta carpeta que serian:
+jcommon
+jfreechart en este caso usremos el jfreechart-1.0.19.jar
+ahora seleccionamos abrir
+bien con esto ya lo tenemos en nuestro proyecto y son la unicas que necesitaremos para este ejemplo de proyecto,
+bien ahora regresando a nuestro proyecto nos dirigimos a nuestro JFrame que se llama Circular.java vamoa a crear la siguiente aplicación en este caso agragare 5 jLabel y y jTextfield
+en este caso para que los datos que yo ingresa sean los de la grafica me lo devuelva, ustedes tendran que hacero con los archivos csv que les proporcionara su auxiliar y dependiendo en que ventana y usuario se encuentren en su proyecto, también agregare un botón para que me genere la gráfica por lo que entiendo ustedes se les debera generar con los datos cargados automaticamente, bien continuando dare un poco de diseño, bien ahora como podemos observar ya contamos con nuestra applicación, para este caso tenemos 4 categorías las cuales vamos a graficar en una grafica circular o una grafica de pastel, recordemos que esta grafica circular es un circulo el cual se divide en muchas partes permitiendonos ver lo que deseamos en este caso porcentajes o total de personas interesadas, para esta aplicación como mencione se va a estar dividiendo en 4, dependiendo los valores qu estaresmos escribiendo en los jTexfield, en este caso contamos con
+Videojuegos
+Deportes 
+Internet
+y libros
+y cuando nosotros presionemos el botón de graficar recordemos que se generara la grafica correspondiente, donde se nos mostrara? bien agregamos un jpanel en esta parte, el cuál seria este que estoy moviendo ustedes tendran que hacerlo segun lo que se les indico en el proyecto lo cual si no estoy mal debe ser así, bien yo utilizare un botón y como les mencione a ustedes les debera de generar la gráfica automaticamente al cargar su archivo csv,(dirigirme al pdf a explicar la parte) en este caso yo al usar el botón, bien en este caso yo lo dejare en un tamaño de 500*200, ustedes deberan como queda mejor cuando este trabajando en sus proyectos.
+Bueno continuando entonces que valores estaran recibiendo los jtextfield bien en este caso yo quiero valores enteros, por lo cual tratare de que esten recibiendo los valores de tipo enteros, cuando se sumen todos estos valores es cuando me podra generar la grafica a un 100% y los porcentajes, por lo cual no importa la cantidad de lo ingrese siempre y cuando sea un entero para que automaticamente me redonde como lo coloque en este caso un 100%.
+Bien vamos a dar un al botón ed graficar para empezar a dessarrollar el código que necesitamos para esto hay distinta forma darle doble click si no los lleva a nada click derecho, seleccionan events, action y actionperformed para empezar a hacer el código, como pueden ver ambas funcionan, ahora empezamos a hacer el código, primero vamos a recuperar los valores de cada jtextfield y los vamos a asignar en 4 variables de tipo entero y nos quedaria de la siguiente forma:
+int n1 = Integer.parseInt(jTextField1.getText());
+
+int n1 = Integer.parseInt(jTextField1.getText());
+        int n2 = Integer.parseInt(jTextField1.getText());
+        int n3 = Integer.parseInt(jTextField1.getText());
+        int n4 = Integer.parseInt(jTextField1.getText());
+        
+        DefaulPieDataset datos = new DefaultPieDataset();
+
+bien copiamos el anterior codigo para los siguientes 3 que faltan
+
+bien ahora como pueden observar contamos con las variables n1,n2,n3 y n4 para cada número respectivamente y para cada jTextfield también la cual es nuestra intención en este ejemplo, ustedes tendra que acomodarlo a su proyecto para la carga del csv, bien ahora nosotros lo que vamos a hacer es ocupar una clase que es defaultpiedataset el cual nos va a servir para definir todos los datos que vamos a estar manipulando en nuestro grafico, bien si se dan cuenta acá marca un error el facil de solucionar basicamente no esta indicando que no contamos con dicha libreria en este caso requerimos importar la libreria org.jfree.data.DefaultPieDataset, la importación es sencilla, unicamente damos click aquí y nos mostrara add  y la libreria mencionada anteriormente 
+bien lo siguiente es definir los valores para nuestras 4 categorias las cuales serán 1 para :
+Videojuegos
+Deportes 
+Internet
+y libros
+
+
+datos.setValue("VideoJuegos",n1);
+        datos.setValue("Deportes",n2);
+        datos.setValue("Internet",n3);
+        datos.setValue("Libros",n4);
+ahora como pueden observar contamos con el nombre y el valor
+
+Para = ("VideoJuegos",n1);
+        ("Deportes",n2);
+        ("Internet",n3);
+        ("Libros",n4);
+
+Bien lo siguiente que vamos a hacer es crear un objeto de tipo jfreechart que es practicamente nuestro gráfico lo cuál quedaria de la siguiente forma
+
+ JFreeChart grafico_circular = ChartFactory.createPieChart();
+
+Para crear el grafico necesitamos el método createPieChart
+ bien ahora este nos sale con error ya que necesitamos los argumentos correspondientes  bien los argumentos los voy a escribir y se los explico
+
+bien para generar la gráfica requerimos el nombre
+los datos
+nombre de las categorias que sera un true
+requerimos las herrmaientas que tambien será verdadero y no requerimos la generación de url
+y queda de la siguiente forma bueno despues de esto necesitamos crear el panel para poderlo asignar a nuetro jPanel1 como ya en el JFrame bien seria de la siguiente forma:
+
+
+ChartPanel panel = new CharPanel(grafico_circular);
+        panel.setMouseWheelEnabled(true);
+        panel.setPreferredSize(new Dimension(400,200));
+        
+
+
+importamos lo que nos pide que seria dimension 
+
+Bien el panel que creamos se llama panel y se le esta asigando el graficocircular
+se esta asignando la propiedad verdadero para que se pueda mover la rueda del raton
+y se le esta estableciendo una dimensición de 400 de ancho por 200 de alto
+
+ya que contamos con este objeto panel vamos a continuar con asignarlo con nuestro jpanel1 y esto lo haremos de la siguiente forma 
+
+	Panel1.setLayout(new BorderLayout());
+        jPanel1.add(panel,BorderLayout.NORTH);
+
+BIEN estamo asignando un Layout al jPanel1 y se le esta agregando el argumento tipo panel junto con la propiedad BorderLayout para que lo ponga en la parte superior del panel
+
+
+por ultimo para ejecutar la aplicaión necesitamos agregar la línea de código pack() y la línea de código repaint() para asegurarnos de que nuestro grafico no se borre,
+
+
+ 
+
+
+
