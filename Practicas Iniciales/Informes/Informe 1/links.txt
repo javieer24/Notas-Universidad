@@ -1,0 +1,47 @@
+links
+https://www.freecodecamp.org/espanol/news/10-comandos-de-git-que-todo-desarrollador-deberia-saber/
+git clone se usa para copiar un repositorio remoto en tu computadora1.
+git branch se usa para listar, crear o eliminar ramas en tu repositorio local.
+git checkout se usa para cambiar entre ramas o restaurar archivos en tu repositorio local1.
+git status muestra el estado de los cambios en tu repositorio local.
+git add agrega cambios en el directorio de trabajo al área de preparación (staging area).
+git commit guarda los cambios agregados al área de preparación en el repositorio local.
+git push envía los cambios guardados en el repositorio local a un repositorio remoto.
+git pull se usa para descargar contenido de un repositorio remoto y actualizar al instante el repositorio local para reflejar ese contenido. 
+git revert deshace un commit específico creando un nuevo commit que invierte los cambios.
+git merge fusiona una rama en otra rama activa.
+
+ cd .\Desktop\
+ cd .\EjemploRepo1\
+
+public class Main {
+    public static void main(String[] args) {
+
+        System.out.printf("Hello and welcome!");
+
+    }
+}
+
+
+
+
+
+DevOps
+
+import java.util.Scanner; //importa la clase Scanner para leer datos del usuario
+
+public class AreaCirculo {
+    public static void main(String[] args) {
+        final double PI = 3.14159; //declara una constante para el valor de PI
+        double radio, area; //declara las variables para el radio y área del círculo
+
+        Scanner entrada = new Scanner(System.in); //crea un nuevo objeto Scanner para leer datos del usuario
+
+        System.out.print("Ingrese el radio del círculo: "); //pide al usuario que ingrese el radio del círculo
+        radio = entrada.nextDouble(); //lee el radio ingresado por el usuario
+
+        area = PI * radio * radio; //calcula el área del círculo utilizando el radio ingresado
+
+        System.out.printf("El área del círculo es: %.2f", area); //imprime el área del círculo con 2 decimales
+    }
+}
