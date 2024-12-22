@@ -51,38 +51,11 @@ Notas Universidad
 |   |    ├──  Metodología de Sistemas
 |   |    |         ├──  Estadistica
 |   |    |         ├──  Lógica de Sistemas 
+|   |    |         ├──  Investigación de Operaciones 1
+|   |    |         ├──  Teoría de Sistemas 1
 └── README.md
 
 ~~~
-
-## 📋 Tabla de Contenidos
-
--[📋 Tabla de Contenidos](#-tabla-de-contenidos)
-- [ Notas Universidad ](#-sistema-de-gestión-de-aeropuerto-)
-  - [🔨 Estructura](#-estructura)
-  - [💡 Características:](#-características)
-  - [📋 Tabla de Contenidos](#-tabla-de-contenidos)
-  - [📟Instalación](#instalación)
-    - [⚒  Requerimientos](#--requerimientos)
-    - [🗂 Windows](#-windows)
-    - [⚡ Inicio Rápido](#-inicio-rápido)
-  - [📁 Formato de Archivos de Entrada](#-formato-de-archivos-de-entrada)
-    - [Aviones](#aviones)
-    - [Pilotos](#pilotos)
-    - [Rutas](#rutas)
-    - [Aviones](#aviones-1)
-  - [🗂️ Generación de Reportes](#️-generación-de-reportes)
-  - [💻 Ejemplo de Interfaz de Usuario](#-ejemplo-de-interfaz-de-usuario)
-  - [📖 Documentación](#-documentación)
-  - [Contribuciones](#contribuciones)
-
-## <div align="center"> Recursos </div>
-
-
-
-
-
-
 <div align="center">
 🙍‍♂️ Javier Andrés Monjes Solórzano
 </div>
