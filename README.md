@@ -40,6 +40,7 @@ Notas Universidad
 |   ├── Practicas Iniciales
 ├── Programación
 |   |    ├──  Ciencias de la Computación
+|   |    |         ├──  Investigación de Operaciones 2
 |   |    |         ├──  Lenguajes Formales y de Programación 
 |   |    |         ├──  Matemática para la Computación 1
 |   |    |         ├──  Matemática para la Computación 2
@@ -50,9 +51,9 @@ Notas Universidad
 |   |    |         ├──  Introducción a la Programación y Computación 2
 |   |    ├──  Metodología de Sistemas
 |   |    |         ├──  Estadistica
-|   |    |         ├──  Lógica de Sistemas 
 |   |    |         ├──  Investigación de Operaciones 1
 |   |    |         ├──  Teoría de Sistemas 1
+|   |    |         ├──  Lógica de Sistemas 
 └── README.md
 
 ~~~
